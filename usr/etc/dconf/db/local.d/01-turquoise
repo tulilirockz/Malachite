@@ -1,9 +1,9 @@
 [org/gnome/desktop/interface]
 enable-hot-corners=true
 clock-show-weekday=true
-font-name="Ubuntu 12"
-document-font-name="Ubuntu 12"
-monospace-font-name="Ubuntu Mono 18"
+font-name="Ubuntu Nerd Font 12"
+document-font-name="Ubuntu Nerd Font 12"
+monospace-font-name="UbuntuMono Nerd Font 18"
 cursor-theme="Yaru"
 icon-theme="Yaru-magenta-dark"
 gtk-theme="Yaru-magenta-dark"
