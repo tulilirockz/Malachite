@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
-Name=Waydroid (Force Container Startup)
-Exec=/usr/bin/waydroird-forcestarrt
+Name=WaydroidForce
+Exec=/usr/bin/waydroid-forcestart
 Icon=waydroid
 Categories=X-WayDroid-App;
 X-Purism-FormFactor=Workstation;Mobile;
