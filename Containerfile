@@ -36,7 +36,11 @@ COPY usr/etc/containers /usr/etc/
 COPY ${RECIPE} /usr/share/ublue-os/recipe.yml
 
 # Copy nix install script and Universal Blue wallpapers RPM from Bling image
-COPY --from=ghcr.io/ublue-os/bling:latest /rpms/ublue-os-wallpapers-0.1-1.fc38.noarch.rpm /tmp/ublue-os-wallpapers-0.1-1.fc38.noarch.rpm
+COPY --from=ghcr.io/ublue-os/bling:latest /rpms/ublue-os-wallpapers-*.noarch.rpm /tmp/ublue-os-wallpapers.rpm
+COPY --from=ghcr.io/ublue-os/bling:latest /rpms/ublue-update*.rpm /tmp/ublue-update.rpm
+COPY --from=ghcr.io/ublue-os/bling:latest /files/usr/share/ublue-os/just /usr/share/ublue-os/just
+COPY --from=ghcr.io/ublue-os/bling:latest /files/usr/bin/ublue-nix* /usr/bin
+COPY --from=ghcr.io/ublue-os/bling:latest /files/usr/share/fonts /usr/share/fonts
 
 # Integrate bling justfiles onto image
 COPY --from=ghcr.io/ublue-os/bling:latest /files/usr/share/ublue-os/just /usr/share/ublue-os/just
@@ -52,7 +56,8 @@ COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 COPY scripts /tmp/scripts
 
 # Run the build script, then clean up temp files and finalize container build.
-RUN rpm-ostree install /tmp/ublue-os-wallpapers-0.1-1.fc38.noarch.rpm && \
+RUN rpm-ostree install /tmp/ublue-update.rpm /tmp/ublue-os-wallpapers.rpm && \
+        cp -r /usr/etc/yum.repos.d /etc && \
         chmod +x /tmp/scripts/build.sh && \
         /tmp/scripts/build.sh && \
         rm -rf /tmp/* /var/* && \
