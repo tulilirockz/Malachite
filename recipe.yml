@@ -93,8 +93,6 @@ rpm:
     - gnome-terminal
     - gnome-terminal-nautilus
     - htop
-    - firefox
-    - firefox-langpacks
     - nvtop
     - gnome-tour
 
