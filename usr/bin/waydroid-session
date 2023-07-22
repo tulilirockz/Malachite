@@ -1,0 +1,6 @@
+#!/bin/sh
+mutter --wayland &
+sleep 5
+/usr/bin/waydroid-forcestart
+sleep 2
+waydroid show-full-ui
