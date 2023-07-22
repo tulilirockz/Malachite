@@ -5,3 +5,9 @@ if [[ $(distrobox list | grep nimbus) ]]; then
 else
 	echo "Update skipped: nimbus not installed"
 fi
+
+if [[ $(distrobox list | grep gamebox) ]]; then
+	/usr/bin/distrobox-enter -n gamebox -- 'paru -Sua --noconfirm'
+else
+	echo "Update skipped: gamebox not installed"
+fi

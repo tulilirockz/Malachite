@@ -16,15 +16,33 @@ screens:
       show_terminal: true
       package_manager: yafti.plugin.run
       groups:
+        Gaming:
+          description: A container for gaming! - Sets up Steam, Lutris and more!
+          default: false
+          packages:
+            - Create Box: distrobox create -i ghcr.io/ublue-os/bazzite-arch:latest -n gamebox -Y
+            - Install VSCode: distrobox-enter -n gamebox -- 'distrobox-export --app steam ; distrobox export --app lutris ; distrobox-export --bin protontricks'
         Nimbus:
           description: Development toolbox meant for coding!
-          default: true
+          default: false
           condition:
             run: distrobox list | grep -v nimbus
           packages:
-          - Create Toolbox: distrobox create -i ghcr.io/tulilirockz/nimbus:latest -n nimbus -Y
-          - Install VSCode: distrobox-enter -n nimbus -- 'paru -Syu --noconfirm visual-studio-code-bin'
-          - Export VSCode: distrobox-enter -n nimbus -- 'distrobox-export --app code'
+            - Create Toolbox: distrobox create -i ghcr.io/tulilirockz/nimbus:latest -n nimbus -Y
+            - Install VSCode: distrobox-enter -n nimbus -- 'paru -Syu --noconfirm visual-studio-code-bin'
+            - Export VSCode: distrobox-enter -n nimbus -- 'distrobox-export --app code && distrobox-export --bin /usr/sbin/code'
+        Nix Package Manager:
+          description: Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible
+          default: false
+          packages:
+            - Install Nix Package Support: pkexec ublue-nix-install
+        Ubuntu Theming:
+          description: Makes it so the Ubuntu theming is properly set up
+          default: true
+          packages:
+            - Copy Fonts to local: sh -c "mkdir -p $HOME/.local/share/fonts && cp /usr/share/fonts/ubuntu $HOME/.local/share/fonts"
+            - Set DConf stuff: pkexec dconf update
+
   can-we-modify-your-flatpaks:
     source: yafti.screen.consent
     values:
@@ -199,7 +217,7 @@ screens:
             - Boatswain for Streamdeck: com.feaneron.Boatswain
         Development:
           description: Tools for development
-          default : false
+          default: false
           packages:
             - GitG: org.gnome.gitg
             - Android Studio: com.google.AndroidStudio

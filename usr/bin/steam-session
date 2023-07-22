@@ -1,0 +1,4 @@
+#!/bin/sh
+mutter --wayland &
+sleep 5
+/usr/bin/steam -gamepadui -tenfoot -fulldesktopres -pipewire-dmabuf

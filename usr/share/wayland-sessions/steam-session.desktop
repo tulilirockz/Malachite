@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Steam Wayland Session
+Comment=Steam Gamepad UI-only session
+Exec=/usr/bin/steam-session
+Type=Application
