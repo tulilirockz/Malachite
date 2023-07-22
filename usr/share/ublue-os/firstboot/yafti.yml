@@ -20,22 +20,30 @@ screens:
           description: A container for gaming! - Sets up Steam, Lutris and more!
           default: false
           packages:
-            - Create Box: distrobox create -i ghcr.io/ublue-os/bazzite-arch:latest -n gamebox -Y
-            - Install VSCode: distrobox-enter -n gamebox -- 'distrobox-export --app steam ; distrobox export --app lutris ; distrobox-export --bin protontricks'
+            - Setup Gamebox Container: just --unstable setup gamebox
         Nimbus:
           description: Development toolbox meant for coding!
           default: false
           condition:
             run: distrobox list | grep -v nimbus
           packages:
-            - Create Toolbox: distrobox create -i ghcr.io/tulilirockz/nimbus:latest -n nimbus -Y
-            - Install VSCode: distrobox-enter -n nimbus -- 'paru -Syu --noconfirm visual-studio-code-bin'
-            - Export VSCode: distrobox-enter -n nimbus -- 'distrobox-export --app code && distrobox-export --bin /usr/sbin/code'
+            - Setup Nimbus container: just --unstable setup nimbus
         Nix Package Manager:
           description: Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible
           default: false
           packages:
             - Install Nix Package Support: pkexec ublue-nix-install
+        Remote:
+          description: Sets up proper remote access to this system!
+          default: true
+          packages:
+            - Setup remotes: just --unstable setup remotes
+        Dotfiles:
+          description: Sets up my dotfiles and applies them directily to your system
+          default: true
+          packages:
+            - Setup remotes: just --unstable setup dotfiles
+
         Ubuntu Theming:
           description: Makes it so the Ubuntu theming is properly set up
           default: true
