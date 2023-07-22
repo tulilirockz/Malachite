@@ -1,4 +1,2 @@
 #!/bin/sh
-pkexec killall waydroid
-pkexec waydroid container start &
-waydroid show-full-ui
+pkexec sh -c "killall waydroid ; waydroid container start" &
