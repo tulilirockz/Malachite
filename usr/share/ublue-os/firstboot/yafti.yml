@@ -33,6 +33,11 @@ screens:
           default: false
           packages:
             - Install Nix Package Support: pkexec ublue-nix-install
+        Waydroid:
+          description: Android support with GApps, ARM translation, and Widevine out of the box
+          default: true
+          packages:
+            - Setup remotes: just --unstable setup waydroid
         Remote:
           description: Sets up proper remote access to this system!
           default: true
@@ -43,7 +48,6 @@ screens:
           default: true
           packages:
             - Setup remotes: just --unstable setup dotfiles
-
         Ubuntu Theming:
           description: Makes it so the Ubuntu theming is properly set up
           default: true
