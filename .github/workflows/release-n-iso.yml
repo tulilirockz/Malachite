@@ -1,6 +1,7 @@
 on:
   push:
     branches:
+      - live
       - main
 name: release-please
 jobs:
