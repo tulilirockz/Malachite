@@ -53,3 +53,5 @@ ublue_variants:
     flavors:
       - label: malachite
         info: Malachite
+      - label: malachine-nvidia
+        info: Malachive Nvidia builds 
