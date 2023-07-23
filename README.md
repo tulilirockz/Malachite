@@ -34,3 +34,13 @@ This repository builds date tags as well, so if you want to rebase to a particul
 ```
 sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/tulilirockz/malachite:20230722
 ```
+
+## Nvidia
+
+If you are going to use nvidia builds, make sure to follow all the instructions mentioned at: https://universal-blue.org/images/nvidia/
+
+Then, rebase to my build!
+
+```sh
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/tulilirockz/malachite-nvidia:latest
+```
