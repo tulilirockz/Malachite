@@ -52,9 +52,7 @@ screens:
           description: Makes it so the Ubuntu theming is properly set up
           default: true
           packages:
-            - Copy Fonts to local: sh -c "mkdir -p $HOME/.local/share/fonts && cp /usr/share/fonts/ubuntu $HOME/.local/share/fonts"
-            - Set DConf stuff: pkexec dconf update
-
+            - Set Theming: pkexec dconf update
   can-we-modify-your-flatpaks:
     source: yafti.screen.consent
     values:
@@ -151,13 +149,20 @@ screens:
           description: System applications for all desktop environments.
           default: true
           packages:
-            - Fedora Media Writer: org.fedoraproject.MediaWriter
             - Flatseal (Permission Manager): com.github.tchx84.Flatseal
-            - Bitwarden: com.bitwarden.desktop
-            - Cockpit Client: org.cockpit_project.CockpitClient
             - EasyEffects: com.github.wwmm.easyeffects
             - Helvum: org.pipewire.Helvum
             - Firmware Manager: org.gnome.Firmware
+        System Extras:
+          description: System applications for all desktop environments.
+          default: true
+          packages:
+            - Syncthing GTK: me.kozec.syncthingtk
+            - Cockpit Client: org.cockpit_project.CockpitClient
+            - Bitwarden: com.bitwarden.desktop
+            - Fedora Media Writer: org.fedoraproject.MediaWriter
+            - Bitwarden: com.bitwarden.desktop
+            - Cockpit Client: org.cockpit_project.CockpitClient
         Web Browsers:
           description: Additional browsers to complement or replace Firefox.
           default: false
@@ -251,13 +256,11 @@ screens:
       title: "All done!"
       icon: "/path/to/icon"
       links:
-        - "Check out this OS source code":
-          run: /usr/bin/xdg-open https://github.com/tulilirockz/Turquoise
-        - "Install More Applications":
+      - "Install More Applications":
           run: /usr/bin/gnome-software
-        - "Website":
+      - "Website":
           run: /usr/bin/xdg-open https://ublue.it
-        - "Join the Discord Community":
+      - "Join the Discord Community":
           run: /usr/bin/xdg-open https://discord.gg/XjG48C7VHx
       description: |
-        Thanks for trying uBlue, we hope you enjoy it!
+        Thank you for trying Malachite, we hope you enjoy it!
