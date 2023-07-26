@@ -1,4 +1,9 @@
 #!/bin/sh
 mutter --wayland &
 sleep 5
-/usr/bin/steam -gamepadui -tenfoot -fulldesktopres -pipewire-dmabuf
+
+if [[ $(distrobox list | grep gamebox) || ! $(flatpak list --app --user --columns=application | grep com.valve) ]]; then
+    /usr/bin/steam -gamepadui -tenfoot -fulldesktopres -pipewire-dmabuf
+else
+    flatpak run com.valvesoftware.Steam -gamepadui -tenfoot -fulldesktopres -pipewire-dmabuf
+fi
