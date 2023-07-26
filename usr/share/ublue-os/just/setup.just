@@ -29,6 +29,8 @@ nimbus:
     distrobox create -i ghcr.io/tulilirockz/nimbus:latest -n nimbus -Y
     distrobox-enter -n nimbus -- 'paru -Syu --noconfirm visual-studio-code-bin'
     distrobox-enter -n nimbus -- 'distrobox-export --app code && distrobox-export --bin /usr/sbin/code'
+    distrobox-enter -n nimbus -- 'distrobox-export --bin /usr/sbin/gh'
+    distrobox-enter -n nimbus -- 'distrobox-export --bin /usr/sbin/glab'
 
 gamebox:
     distrobox create -i ghcr.io/ublue-os/bazzite-arch:latest -n gamebox -Y

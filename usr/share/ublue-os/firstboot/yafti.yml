@@ -35,17 +35,17 @@ screens:
             - Install Nix Package Support: pkexec ublue-nix-install
         Waydroid:
           description: Android support with GApps, ARM translation, and Widevine out of the box
-          default: true
+          default: false
           packages:
             - Setup remotes: just --unstable setup waydroid
         Remote:
           description: Sets up proper remote access to this system!
-          default: true
+          default: false
           packages:
             - Setup remotes: just --unstable setup remotes
         Dotfiles:
           description: Sets up my dotfiles and applies them directily to your system
-          default: true
+          default: false
           packages:
             - Setup remotes: just --unstable setup dotfiles
         Ubuntu Theming:
@@ -53,6 +53,11 @@ screens:
           default: true
           packages:
             - Set Theming: pkexec dconf update
+        Positivo Touch Screen:
+          description: Adds udev rules for Positivo c464c-like laptops touchscreens
+          default: false
+          packages:
+            - Setup: just --unstable setup positivo-touchscreen
   can-we-modify-your-flatpaks:
     source: yafti.screen.consent
     values:
@@ -129,7 +134,7 @@ screens:
             - Gradience: com.github.GradienceTeam.Gradience
             - Solanum: org.gnome.Solanum
             - Podcasts: org.gnome.Podcasts
-        System KDE Apps:
+        KDE Extras:
           description: Core system applications for KDE
           default: false
           packages:
@@ -153,6 +158,7 @@ screens:
             - EasyEffects: com.github.wwmm.easyeffects
             - Helvum: org.pipewire.Helvum
             - Firmware Manager: org.gnome.Firmware
+            - Backup Manager: org.gnome.World.PikaBackup
         System Extras:
           description: System applications for all desktop environments.
           default: true
