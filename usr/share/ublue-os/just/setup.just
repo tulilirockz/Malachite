@@ -2,6 +2,9 @@ waydroid:
 	pkexec waydroid init -s GAPPS -c https://ota.waydro.id/system -v https://ota.waydro.id/vendor
 	pkexec sh -c 'git clone https://github.com/casualsnek/waydroid_script /tmp/wrscript && python3 -m venv /tmp/wrscript/venv && /tmp/wrscript/venv/bin/pip install -r /tmp/wrscript/requirements.txt && /tmp/wrscript/venv/bin/python3 /tmp/wrscript/main.py -a 11 install smartdock libndk widevine && /tmp/wrscript/venv/bin/python3 /tmp/wrscript/main.py -a 11 hack hidestatusbar'
 
+cockpit:
+  pkexec sh -c 'systemctl try-restart sshd && podman container runlabel --name cockpit-ws RUN quay.io/cockpit/ws && podman container runlabel INSTALL quay.io/cockpit/ws && systemctl enable cockpit.service'
+
 fish:
   pkexec usermod -s /usr/bin/fish $USER
   curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish

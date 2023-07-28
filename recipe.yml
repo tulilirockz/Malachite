@@ -74,6 +74,9 @@ rpm:
     - cockpit-podman
     - cockpit-navigator
     - cockpit-file-sharing
+    - cockpit-pcp
+    - cockpit-networkmanager
+    - cockpit-ostree
     - tailscale
     - gnome-tweaks
     - gnome-shell-extension-appindicator

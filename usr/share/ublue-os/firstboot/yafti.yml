@@ -42,7 +42,8 @@ screens:
           description: Sets up proper remote access to this system!
           default: false
           packages:
-            - Setup remotes: just --unstable setup remotes
+            - Setup Remotes: just --unstable setup remotes
+            - Setup Cockpit: just --unstable setup cockpit
         Dotfiles:
           description: Sets up my dotfiles and applies them directily to your system
           default: false
