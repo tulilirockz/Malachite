@@ -1,19 +1,17 @@
 [org/gnome/desktop/interface]
 enable-hot-corners=true
 clock-show-weekday=true
-font-name="Ubuntu Nerd Font 12"
-document-font-name="Ubuntu Nerd Font 12"
-monospace-font-name="UbuntuMono Nerd Font 18"
-cursor-theme="Yaru"
-icon-theme="Yaru-magenta-dark"
-gtk-theme="Yaru-magenta-dark"
+font-name="Inter 12"
+document-font-name="Inter 12"
+monospace-font-name=" 18"
+cursor-theme="Adwaita"
+icon-theme="Adwaita"
+gtk-theme="adw-gtk3"
 font-antialiasing="rgba"
 font-hinting="full"
-color-scheme="prefer-dark"
 
 [org/gnome/desktop/sound]
-allow-volume-above-100-percent=true
-theme-name="Yaru"
+theme-name="Adwaita"
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile="flat"
@@ -24,38 +22,14 @@ center-new-windows=true
 [org/gnome/desktop/wm/preferences]
 button-layout=":minimize,maximize,close"
 num-workspaces='4'
-title-bar-font="Ubuntu Bold 12"
+title-bar-font="Inter 12"
 
 [org/gnome/shell] 
 favorite-apps = ['org.gnome.Nautilus.desktop', 'org.gnome.Console.desktop', 'org.gnome.Settings.desktop', 'org.gnome.Software.desktop']
-enabled-extensions = ['user-theme@gnome-shell-extensions.gcampax.github.com','dash-to-dock@micxgx.gmail.com','appindicatorsupport@rgcjonas.gmail.com']
-
-[org/gnome/shell/extensions/user-theme]
-name='Yaru-magenta-dark'
+enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com']
 
 [org/gnome/desktop/peripherals/touchpad]
 tap-to-click=true
-
-[org/gnome/shell/extensions/dash-to-dock]
-dock-fixed=true
-dock-position='LEFT'
-extend-height=true
-dash-max-icon-size=48
-transparency-mode='DEFAULT'
-background-color='rgb(0,0,0)'
-background-opacity=1
-click-action='focus-minimize-or-previews'
-custom-background-color=true
-customize-alphas=true
-dash-max-icon-size=48
-how-icons-notifications-counter=true
-show-mounts=true
-show-trash=true
-force-straight-corner=false
-custom-theme-shrink=true
-disable-overview-on-startup=true
-icon-size-fixed=true
-show-icons-notifications-counter=true
 
 [org/gtk/gtk4/settings/file-chooser]
 sort-directories-first=true

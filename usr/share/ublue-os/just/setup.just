@@ -5,6 +5,9 @@ waydroid:
 cockpit:
   pkexec sh -c 'systemctl try-restart sshd && podman container runlabel --name cockpit-ws RUN quay.io/cockpit/ws && podman container runlabel INSTALL quay.io/cockpit/ws && systemctl enable cockpit.service'
 
+ubuntu-theme:
+  dconf load / < /usr/share/ublue-os/malachite/dconf/ubuntu.ini
+
 fish:
   pkexec usermod -s /usr/bin/fish $USER
   curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
