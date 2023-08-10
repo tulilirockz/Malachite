@@ -116,30 +116,34 @@ screens:
             - Document Viewer: org.gnome.Evince
             - Extension Manager: com.mattjakeman.ExtensionManager
             - Image Viewer: org.gnome.Loupe
-            - Sushi (Nautilus Previewer): org.gnome.NautilusPreviewer
+            - File Previewr: org.gnome.NautilusPreviewer
             - Text Editor: org.gnome.TextEditor
-            - Celluloid: io.github.celluloid_player.Celluloid
+            - Video Player: io.github.celluloid_player.Celluloid
+            - Music Player: com.github.neithern.g4music
             - Weather: org.gnome.Weather
-            - GFeeds: org.gabmus.gfeeds
             - Logs: org.gnome.Logs
         GNOME Extras:
           description: Extra GNOME applications
           default: false
           packages:
-            - Photos (Organizer): org.gnome.Photos
-            - TubeConverter: org.nickvision.tubeconverter
+            - RSS Reader (NewsFlash): io.gitlab.news_flash.NewsFlash
+            - Youtube Downloader: org.nickvision.tubeconverter
+            - Youtube Player: io.gitlab.zehkira.Monophony
             - Authenticator: com.belmoussaoui.Authenticator
-            - Seahorse: org.gnome.seahorse.Application
-            - Shotwell: org.gnome.Shotwell
-            - Lollypop: org.gnome.Lollypop
-            - Gradience: com.github.GradienceTeam.Gradience
-            - Solanum: org.gnome.Solanum
-            - Podcasts: org.gnome.Podcasts
+            - Key Manager: org.gnome.seahorse.Application
+            - Photo Organizer: org.gnome.Shotwell
+            - Music Library Player: org.gnome.Lollypop
+            - GTK4 Theme Customizer: com.github.GradienceTeam.Gradience
+            - Login Screen Manager: io.github.realmazharhussain.GdmSettings
+            - DConf Editor: ca.desrt.dconf-editor
+            - Pomodoro Timer: org.gnome.Solanum
+            - Podcasts Player: org.gnome.Podcasts
+            - Music Metadata Tagger: org.nickvision.tagger
         KDE Extras:
           description: Core system applications for KDE
           default: false
           packages:
-            - Alligator: org.kde.alligator
+            - RSS Reader (Alligator): org.kde.alligator
             - Kasts: org.kde.kasts
             - Kdenlive: org.kde.kdenlive
             - Krita: org.kde.krita
@@ -155,17 +159,19 @@ screens:
           description: System applications for all desktop environments.
           default: true
           packages:
-            - Flatseal (Permission Manager): com.github.tchx84.Flatseal
-            - EasyEffects: com.github.wwmm.easyeffects
-            - Helvum: org.pipewire.Helvum
+            - Permission Manager: com.github.tchx84.Flatseal
+            - Audio Routing: org.pipewire.Helvum
             - Firmware Manager: org.gnome.Firmware
             - Backup Manager: org.gnome.World.PikaBackup
+            - System Inspector: io.github.nokse22.inspector
+            - System Monitor: io.missioncenter.MissionCenter
+            - Network Inspector: org.gabmus.whatip
         System Extras:
           description: System applications for all desktop environments.
           default: true
           packages:
+            - EasyEffects: com.github.wwmm.easyeffects
             - Syncthing GTK: me.kozec.syncthingtk
-            - Cockpit Client: org.cockpit_project.CockpitClient
             - Bitwarden: com.bitwarden.desktop
             - Fedora Media Writer: org.fedoraproject.MediaWriter
             - Bitwarden: com.bitwarden.desktop
@@ -186,7 +192,6 @@ screens:
           description: "Rock and Stone!"
           default: false
           packages:
-            - OSU: sh.ppy.osu
             - QBittorrent: org.qbittorrent.qBittorrent
             - Transmission: com.transmissionbt.Transmission
             - Fragments: de.haeckerfelix.Fragments
@@ -226,6 +231,12 @@ screens:
             - Godot: org.godotengine.Godot
             - Audacity: org.audacityteam.Audacity
             - Inkscape: org.inkscape.Inkscape
+            - Emblem: org.gnome.design.Emblem
+            - Contrast: org.gnome.design.Contrast
+            - Elastic (Animations): app.drey.Elastic
+            - Letter Press: io.gitlab.gregorni.ASCIIImages
+            - Icon Library: org.gnome.design.IconLibrary
+            - Identity: org.gnome.gitlab.YaLTeR.Identity
             - Footage: io.gitlab.adhami3310.Footage
             - Upscaler: io.gitlab.theevilskeleton.Upscaler
             - EarTag: app.drey.EarTag
@@ -243,6 +254,8 @@ screens:
           description: Tools for development
           default: false
           packages:
+            - GHex: org.gnome.GHex
+            - Git Notifier: com.mardojai.ForgeSparks
             - GitG: org.gnome.gitg
             - Android Studio: com.google.AndroidStudio
             - Cambalache: ar.xjuan.Cambalache
@@ -264,10 +277,12 @@ screens:
       icon: "/path/to/icon"
       links:
         - "Install More Applications":
-            run: /usr/bin/gnome-software
+          run: /usr/bin/gnome-software
         - "Website":
-            run: /usr/bin/xdg-open https://ublue.it
+          run: /usr/bin/xdg-open https://universal-blue.org
+        - "This images source":
+          run:
         - "Join the Discord Community":
-            run: /usr/bin/xdg-open https://discord.gg/XjG48C7VHx
+          run: /usr/bin/xdg-open https://discord.gg/XjG48C7VHx
       description: |
         Thank you for trying Malachite, we hope you enjoy it!
