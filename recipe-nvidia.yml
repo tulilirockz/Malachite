@@ -86,11 +86,8 @@ rpm:
     - firefox
     - firefox-langpacks
     - wpa_supplicant
-    - gnome-terminal
-    - gnome-terminal-nautilus
     - htop
     - nvtop
-    - gnome-tour
 
 # Configuration for the "first boot" experience, which is available after login.
 firstboot:
