@@ -75,13 +75,7 @@ rpm:
     - cockpit-navigator
     - cockpit-file-sharing
     - tailscale
-    - gnome-tweaks
-    - gnome-shell-extension-appindicator
-    - gnome-console
-    - gnome-shell-extension-dash-to-dock
-    - yaru-theme
     - fish
-    - gnome-shell-extension-gsconnect
     - ubuntumono-nerd-fonts
     - ubuntu-nerd-fonts
 
