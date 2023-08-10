@@ -1,4 +1,3 @@
-
 # This file can only be edited inside the uBlue image's git repository.
 
 # The image will be at "ghcr.io/yourusername/name".
@@ -6,7 +5,7 @@ name: malachite-nvidia
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
-base-image: ghcr.io/ublue-os/silverblue-nvidia
+base-image: ghcr.io/ublue-os/kinoite-nvidia
 
 # What Fedora version to use. Use an explicit version or `latest`.
 # If you use `latest`, you will be automatically updated to the next major
@@ -83,7 +82,7 @@ rpm:
     - yaru-theme
     - fish
     - gnome-shell-extension-gsconnect
-    - ubuntumono-nerd-fonts 
+    - ubuntumono-nerd-fonts
     - ubuntu-nerd-fonts
 
     # These RPMs will be removed from the system image. This step happens during
