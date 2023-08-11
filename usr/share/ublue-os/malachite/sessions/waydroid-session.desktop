@@ -1,5 +1,5 @@
 [Desktop Entry]
 Name=Waydroid On Wayland
 Comment=Containerized Android Operating System
-Exec=/var/opt/waydroid-session
+Exec=/usr/bin/waydroid-session
 Type=Application

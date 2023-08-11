@@ -1,5 +1,11 @@
 #!/bin/sh
-mutter --wayland &
+if command -v mutter ; then
+    mutter --wayland &
+elif command -v kwin_wayland ; then
+    kwin_wayland --xwayland &
+else
+    exit 1
+fi
 sleep 5
 /usr/bin/waydroid-forcestart
 sleep 2
