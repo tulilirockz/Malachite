@@ -26,7 +26,6 @@ rpm:
     - cockpit-networkmanager
     - cockpit-ostree
     - tailscale
-    - yaru-theme
     - fish
     - waydroid
     - kdeconnectd
