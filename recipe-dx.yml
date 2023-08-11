@@ -23,7 +23,6 @@ rpm:
     - cockpit-navigator
     - cockpit-file-sharing
     - cockpit-pcp
-    - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
     - cockpit-networkmanager
     - cockpit-ostree
     - tailscale
