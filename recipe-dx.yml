@@ -1,0 +1,54 @@
+name: malachite-dx
+base-image: ghcr.io/ublue-os/kinoite-main
+fedora-version: 38
+description: Opinionated Fedora Silverblue-based operating system image
+scripts:
+  pre:
+    - autorun.sh
+  post:
+    - autorun.sh
+rpm:
+  repos:
+    - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/atim/nushell/repo/fedora-%FEDORA_VERSION%/atim-nushell-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/varlad/zellij/repo/fedora-%FEDORA_VERSION%/varlad-zellij-fedora-%FEDORA_VERSION%.repo
+    - https://terra.fyralabs.com/terra.repo
+  install:
+    - python3-pip
+    - libadwaita
+    - iwd
+    - podman-docker
+    - cockpit
+    - cockpit-podman
+    - cockpit-navigator
+    - cockpit-file-sharing
+    - cockpit-pcp
+    - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
+    - cockpit-networkmanager
+    - cockpit-ostree
+    - tailscale
+    - yaru-theme
+    - fish
+    - waydroid
+    - kdeconnectd
+    - ubuntumono-nerd-fonts
+    - ubuntu-nerd-fonts
+    - starship
+    - zellij
+    - virt-manager
+    - qemu
+    - qemu-user-static
+    - qemu-user-binfmt
+    - libvirt
+    - qemu-img
+    - tmux
+    - nushell
+  remove:
+    - firefox
+    - firefox-langpacks
+    - wpa_supplicant
+firstboot:
+  yafti: true
+  flatpaks:
+    - io.github.celluloid_player.Celluloid
+    - org.kde.krita
