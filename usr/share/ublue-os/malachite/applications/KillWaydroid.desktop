@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Waydroid Kill Server
+Exec=/usr/bin/pkexec waydroid container stop
+Icon=waydroid
+Categories=X-WayDroid-App;
+X-Purism-FormFactor=Workstation;Mobile;
+

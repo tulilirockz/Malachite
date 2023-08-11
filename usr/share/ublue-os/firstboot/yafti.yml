@@ -21,6 +21,7 @@ screens:
           default: false
           packages:
             - Setup Gamebox Container: just --unstable setup gamebox
+            - Setup Steam-only session: just --unstable setup steam-session
         Nimbus:
           description: Development toolbox meant for coding!
           default: false
@@ -37,7 +38,9 @@ screens:
           description: Android support with GApps, ARM translation, and Widevine out of the box
           default: false
           packages:
-            - Setup remotes: just --unstable setup waydroid
+            - Setup waydroid: just --unstable setup waydroid
+            - Setup waydroid-only session: just --unstable setup waydroid-session
+            - Setup shortcuts: just --unstable setup waydroid-shortcut
         Remote:
           description: Sets up proper remote access to this system!
           default: false
