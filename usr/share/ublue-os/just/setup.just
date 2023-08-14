@@ -52,3 +52,6 @@ gamebox:
 
 steam-session:
   pkexec sh -c 'mkdir -p /usr/local/share/wayland-sessions && cp /usr/share/ublue-os/malachite/sessions/steam-session.desktop /usr/local/share/wayland-sessions'
+
+nushell:
+  sudo lchsh -i /usr/bin/nu $USER
