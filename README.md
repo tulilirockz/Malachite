@@ -2,7 +2,7 @@
 
 [![build-ublue](https://github.com/tulilirockz/malachite/actions/workflows/build.yml/badge.svg)](https://github.com/tulilirockz/malachite/actions/workflows/build.yml)
 
-This is a spin on how I think a Fedora system for me should look like. 
+This is a spin on how I think a Fedora system for me should look like.
 
 It tries to make it so I just need to install it, and forget it, so it is quite opinionated, with my themes and settings by default. Also contains remote access tools and services, such as Cockpit and Tailscale.
 
