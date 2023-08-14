@@ -28,8 +28,6 @@ rpm:
     - fish
     - waydroid
     - kdeconnectd
-    - starship
-    - zellij
     - virt-manager
     - qemu
     - qemu-user-static
