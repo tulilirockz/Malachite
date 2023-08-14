@@ -54,4 +54,6 @@ ublue_variants:
       - label: malachite
         info: Malachite
       - label: malachine-nvidia
-        info: Malachive Nvidia builds 
+        info: Malachive Nvidia builds
+      - label: malachine-dx
+        info: Malachive Development Builds

@@ -88,23 +88,6 @@ else
     rm -rf "${FIRSTBOOT_DATA}"
 fi
 
-# Add a new yafti "package group" called Custom, for the packages defined in recipe.yml.
-# Only adds the package group if yafti is enabled and Flatpaks are defined in the recipe.
-if [[ "${YAFTI_ENABLED}" == "true" ]]; then
-    YAFTI_FILE="${FIRSTBOOT_DATA}/yafti.yml"
-    get_yaml_array flatpaks '.firstboot.flatpaks[]'
-    if [[ ${#flatpaks[@]} -gt 0 ]]; then
-        echo "-- yafti: Adding Flatpaks defined in recipe.yml --"
-        yq -i '.screens.applications.values.groups.Custom.description = "Flatpaks suggested by the image maintainer."' "${YAFTI_FILE}"
-        yq -i '.screens.applications.values.groups.Custom.default = true' "${YAFTI_FILE}"
-        for pkg in "${flatpaks[@]}"; do
-            echo "Adding to yafti: ${pkg}"
-            yq -i ".screens.applications.values.groups.Custom.packages += [{\"${pkg}\": \"${pkg}\"}]" "${YAFTI_FILE}"
-        done
-        echo "---"
-    fi
-fi
-
 # Setup container signing
 echo "Setup container signing in policy.json and cosign.yaml"
 echo "Registry to write: $IMAGE_REGISTRY"

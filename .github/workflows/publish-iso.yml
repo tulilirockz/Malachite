@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
 
-name: release-iso
+name: publish-iso
 jobs:
   release-iso:
     name: Generate and Release ISOs
