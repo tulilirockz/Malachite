@@ -7,17 +7,16 @@ scripts:
     - autorun.sh
   post:
     - autorun.sh
+    - dx-extras.sh
 rpm:
   repos:
-    - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/atim/nushell/repo/fedora-%FEDORA_VERSION%/atim-nushell-fedora-%FEDORA_VERSION%.repo
-    - https://copr.fedorainfracloud.org/coprs/varlad/zellij/repo/fedora-%FEDORA_VERSION%/varlad-zellij-fedora-%FEDORA_VERSION%.repo
-    - https://terra.fyralabs.com/terra.repo
   install:
     - python3-pip
     - libadwaita
     - iwd
     - podman-docker
+    - podman-compose
     - cockpit
     - cockpit-podman
     - cockpit-navigator
@@ -29,8 +28,6 @@ rpm:
     - fish
     - waydroid
     - kdeconnectd
-    - ubuntumono-nerd-fonts
-    - ubuntu-nerd-fonts
     - starship
     - zellij
     - virt-manager
@@ -47,6 +44,3 @@ rpm:
     - wpa_supplicant
 firstboot:
   yafti: true
-  flatpaks:
-    - io.github.celluloid_player.Celluloid
-    - org.kde.krita
