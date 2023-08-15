@@ -37,11 +37,9 @@ rpm:
     - tmux
     - nushell
     - butane
-    - kwrite
   remove:
     - firefox
     - firefox-langpacks
     - wpa_supplicant
-    - kate
 firstboot:
   yafti: true
