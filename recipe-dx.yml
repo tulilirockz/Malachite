@@ -38,6 +38,8 @@ rpm:
     - nushell
     - butane
   remove:
+    - gnome-keyring
+    - gnome-keyring-pam 
     - firefox
     - firefox-langpacks
     - wpa_supplicant
