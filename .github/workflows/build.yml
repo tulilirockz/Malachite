@@ -8,14 +8,7 @@ on:
   # Build automatically after pushing commits or tags to the "live", "template"
   # or "main" branches, except when the commit only affects "documentation" text files.
   # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#push
-  push:
-    branches:
-      - live
-      - template
-      - main
-    paths-ignore:
-      - "**.md"
-      - "**.txt"
+  workflow_dispatch:
   # Build pull requests whenever they are opened or updated, to make sure they
   # work. The build won't be deployed, since we filter out PRs in the deployment
   # stage. Note that submitted PRs run the workflow of the *fork's* own primary
@@ -25,10 +18,6 @@ on:
   # checks" to succeed for typical PR branch names such as "fix-something".
   # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request
   pull_request:
-  # Build when manually triggering this workflow for a branch. This allows you
-  # to build any branch, even if it's not listed in the automated triggers above.
-  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
-  workflow_dispatch:
 
 env:
   IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
