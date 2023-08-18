@@ -142,10 +142,15 @@ screens:
             - Pomodoro Timer: org.gnome.Solanum
             - Podcasts Player: org.gnome.Podcasts
             - Music Metadata Tagger: org.nickvision.tagger
+            - Halftone:
         KDE Extras:
           description: Core system applications for KDE
           default: false
           packages:
+            - Koko: org.kde.koko
+            - Authenticator: org.kde.keysmith
+            - VLC: org.vlc.Vlc
+            - KeepassXC:
             - RSS Reader (Alligator): org.kde.alligator
             - Kasts: org.kde.kasts
             - Kdenlive: org.kde.kdenlive
@@ -199,6 +204,7 @@ screens:
             - Transmission: com.transmissionbt.Transmission
             - Fragments: de.haeckerfelix.Fragments
             - Delunge: org.deluge_torrent.deluge
+            - Veloren:
             - Retroarch: org.libretro.RetroArch
             - Lutris: net.lutris.Lutris
             - Bottles: com.usebottles.bottles
