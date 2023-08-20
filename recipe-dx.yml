@@ -2,6 +2,7 @@ name: malachite-dx
 base-image: ghcr.io/ublue-os/kinoite-main
 fedora-version: 38
 description: Opinionated Fedora Silverblue-based operating system image
+
 scripts:
   pre:
     - autorun.sh
@@ -10,7 +11,8 @@ scripts:
     - dx-extras.sh
 rpm:
   repos:
-    - https://copr.fedorainfracloud.org/coprs/atim/nushell/repo/fedora-%FEDORA_VERSION%/atim-nushell-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/kylegospo/hl2linux-selinux/repo/fedora-%FEDORA_VERSION%/kylegospo-hl2linux-selinux-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/kylegospo/wallpaper-engine-kde-plugin/repo/fedora-%FEDORA_VERSION%/kylegospo-wallpaper-engine-kde-plugin-fedora-%FEDORA_VERSION%.repo
   install:
     - python3-pip
     - libadwaita
@@ -35,11 +37,14 @@ rpm:
     - libvirt
     - qemu-img
     - tmux
-    - nushell
     - butane
+    - wallpaper-engine-kde-plugin
+    - hl2linux-selinux
   remove:
     - firefox
     - firefox-langpacks
     - wpa_supplicant
+    - htop
+    - nvtop
 firstboot:
   yafti: true

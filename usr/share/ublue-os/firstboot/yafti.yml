@@ -33,7 +33,7 @@ screens:
           description: Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible
           default: false
           packages:
-            - Install Nix Package Support: pkexec ublue-nix-install
+            - Install Nix Package Support: just --unstable setup nix
         Waydroid:
           description: Android support with GApps, ARM translation, and Widevine out of the box
           default: false
@@ -54,7 +54,7 @@ screens:
             - Setup remotes: just --unstable setup dotfiles
         Ubuntu Theming:
           description: Makes it so the Ubuntu theming is properly set up
-          default: true
+          default: false
           packages:
             - Set Theming: just --unstable setup ubuntu-theme
         Positivo Touch Screen:
@@ -108,7 +108,7 @@ screens:
       groups:
         System GNOME Apps:
           description: Core system applications for GNOME
-          default: true
+          default: false
           packages:
             - Calculator: org.gnome.Calculator
             - Calendar: org.gnome.Calendar
@@ -130,39 +130,46 @@ screens:
           default: false
           packages:
             - RSS Reader (NewsFlash): io.gitlab.news_flash.NewsFlash
-            - Youtube Downloader: org.nickvision.tubeconverter
-            - Youtube Player: io.gitlab.zehkira.Monophony
             - Authenticator: com.belmoussaoui.Authenticator
-            - Key Manager: org.gnome.seahorse.Application
             - Photo Organizer: org.gnome.Shotwell
             - Music Library Player: org.gnome.Lollypop
             - GTK4 Theme Customizer: com.github.GradienceTeam.Gradience
             - Login Screen Manager: io.github.realmazharhussain.GdmSettings
             - DConf Editor: ca.desrt.dconf-editor
-            - Pomodoro Timer: org.gnome.Solanum
             - Podcasts Player: org.gnome.Podcasts
-            - Music Metadata Tagger: org.nickvision.tagger
-            - Halftone:
+        KDE System Apps:
+          description: Core system applications for KDE
+          default: true
+          packages:
+            - Video Viewer (VLC): org.vlc.Vlc
+            - Music Player (Elisa): org.kde.elisa
+            - Image Viewer: org.kde.koko
+            - Pipewire Viewer (QPWGraph): org.rncbc.qpwgraph
+            - Document Viewer (Okular): org.kde.okular
+            - Terminal Emulator (Yakuake): org.kde.yakuake
+            - Clock: org.kde.kclock
+            - Weather: org.kde.kweather
+            - Calculator (Kalk): org.kde.kalk
+            - Camera (Kamoso): org.kde.kamoso
+            - Book Reader (Arianna): org.kde.arianna
         KDE Extras:
           description: Core system applications for KDE
           default: false
           packages:
-            - Koko: org.kde.koko
-            - Authenticator: org.kde.keysmith
-            - VLC: org.vlc.Vlc
-            - KeepassXC:
+            - Authenticator (Keysmith): org.kde.keysmith
             - RSS Reader (Alligator): org.kde.alligator
-            - Kasts: org.kde.kasts
-            - Kdenlive: org.kde.kdenlive
+            - Password Manager (KeepassXC): org.keepassxc.KeePassXC
+            - Podcasts (Kasts): org.kde.kasts
+            - Video Editor (Kdenlive): org.kde.kdenlive
             - Krita: org.kde.krita
-            - Neochat: org.kde.neochat
-            - Okular: org.kde.okular
-            - Tokodon: org.kde.tokodon
-            - Vvave: org.kde.vvave
-            - Elisa: org.kde.elisa
+            - Matrix (Neochat): org.kde.neochat
+            - Mastodon (Tokodon): org.kde.tokodon
+            - Music Player (Vvave): org.kde.vvave
             - Kontact: org.kde.kontact
-            - QPWGraph: org.rncbc.qpwgraph
             - KMail: org.kde.kmail
+            - Jukebox (JuK): org.kde.juk
+            - Kontrast: org.kde.kontrast
+            - Media Player (Haruna): org.kde.harun
         System Apps:
           description: System applications for all desktop environments.
           default: true
@@ -174,6 +181,9 @@ screens:
             - System Inspector: io.github.nokse22.inspector
             - System Monitor: io.missioncenter.MissionCenter
             - Network Inspector: org.gabmus.whatip
+            - ISO Image Writer: org.kde.isoimagewriter
+            - Flatpak Cleaner: io.github.giantpinkrobots.flatsweep
+            - Download Manager: org.kde.kget
         System Extras:
           description: System applications for all desktop environments.
           default: true
@@ -184,6 +194,19 @@ screens:
             - Fedora Media Writer: org.fedoraproject.MediaWriter
             - Bitwarden: com.bitwarden.desktop
             - Cockpit Client: org.cockpit_project.CockpitClient
+            - Youtube Downloader: org.nickvision.tubeconverter
+            - Youtube Player: io.gitlab.zehkira.Monophony
+            - Youtube Music Client (AudioTube): org.kde.audiotube
+            - Youtube Client (PlasmaTube): org.kde.plasmatube
+            - Key Manager: org.gnome.seahorse.Application
+            - Music Metadata Tagger: org.nickvision.tagger
+            - Pomodoro Timer: org.gnome.Solanum
+            - Remote Viewer (KRDC): org.kde.krdc
+            - Time Tracker (KTimeTracker): org.kde.ktimetracker
+            - QBittorrent: org.qbittorrent.qBittorrent
+            - Transmission: com.transmissionbt.Transmission
+            - Fragments: de.haeckerfelix.Fragments
+            - Delunge: org.deluge_torrent.deluge
         Web Browsers:
           description: Additional browsers to complement or replace Firefox.
           default: false
@@ -200,11 +223,7 @@ screens:
           description: "Rock and Stone!"
           default: false
           packages:
-            - QBittorrent: org.qbittorrent.qBittorrent
-            - Transmission: com.transmissionbt.Transmission
-            - Fragments: de.haeckerfelix.Fragments
-            - Delunge: org.deluge_torrent.deluge
-            - Veloren:
+            - Veloren (Launcher): net.veloren.airshipper
             - Retroarch: org.libretro.RetroArch
             - Lutris: net.lutris.Lutris
             - Bottles: com.usebottles.bottles
@@ -222,7 +241,8 @@ screens:
           packages:
             - LibreOffice: org.libreoffice.LibreOffice
             - OnlyOffice: org.onlyoffice.desktopeditors
-            - Setzer: org.cvfosammmm.Setzer
+            - Setzer (LaTeX): org.cvfosammmm.Setzer
+            - Kile (LaTeX): org.kde.kile
             - Thunderbird Email: org.mozilla.Thunderbird
             - Evolution: org.gnome.Evolution
             - GhostWriter: io.github.wereturtle.ghostwriter
@@ -233,6 +253,9 @@ screens:
           description: Make content for the Internet.
           default: false
           packages:
+            - DigiKam: org.kde.digikam
+            - Halftone: io.github.tfuxu.Halftone
+            - Contrast: org.gnome.design.Contrast
             - Godot Engine: org.godotengine.Godot
             - VideoTrimmer: org.gnome.gitlab.YaLTeR.VideoTrimmer
             - Pixelorama: com.orama_interactive.Pixelorama
@@ -263,7 +286,10 @@ screens:
           description: Tools for development
           default: false
           packages:
-            - GHex: org.gnome.GHex
+            - Kleopatra: org.kde.kleopatra
+            - Profiler (KCacheGrind): org.kde.kcachegrind
+            - Kompare: org.kde.kompare
+            - Okteta: org.kde.okteta
             - Git Notifier: com.mardojai.ForgeSparks
             - GitG: org.gnome.gitg
             - Android Studio: com.google.AndroidStudio

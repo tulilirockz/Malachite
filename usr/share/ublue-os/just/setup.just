@@ -1,4 +1,13 @@
-aydroid:
+yakuake-autostart:
+  cp $HOME/.local/share/flatpak/app/org.kde.yakuake/x86_64/stable/active/export/share/applications/org.kde.yakuake.desktop $HOME/.config/autostart
+
+nix:
+  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+  
+fleek:
+  curl -fsSL https://getfleek.dev/installer | bash
+
+waydroid:
 	pkexec waydroid init -s GAPPS -c https://ota.waydro.id/system -v https://ota.waydro.id/vendor
 	pkexec sh -c 'git clone https://github.com/casualsnek/waydroid_script /tmp/wrscript && python3 -m venv /tmp/wrscript/venv && /tmp/wrscript/venv/bin/pip install -r /tmp/wrscript/requirements.txt && /tmp/wrscript/venv/bin/python3 /tmp/wrscript/main.py -a 11 install smartdock libndk widevine && /tmp/wrscript/venv/bin/python3 /tmp/wrscript/main.py -a 11 hack hidestatusbar'
 
