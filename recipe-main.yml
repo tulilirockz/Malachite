@@ -1,5 +1,5 @@
 name: malachite
-base-image: ghcr.io/ublue-os/kinoite
+base-image: ghcr.io/ublue-os/kinoite-main
 fedora-version: 38
 description: Opinionated Fedora Silverblue-based operating system image
 

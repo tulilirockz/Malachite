@@ -36,7 +36,7 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - recipe.yml
+          - recipe-main.yml
           - recipe-nvidia.yml
           - recipe-dx.yml
 
