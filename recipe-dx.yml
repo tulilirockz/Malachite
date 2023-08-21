@@ -41,7 +41,7 @@ rpm:
     - wallpaper-engine-kde-plugin
     - hl2linux-selinux
     - qt5-qtwebsockets
-    - code
+    - code-insiders
   remove:
     - firefox
     - firefox-langpacks
