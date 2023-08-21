@@ -27,6 +27,7 @@ rpm:
     - tailscale
     - wallpaper-engine-kde-plugin
     - hl2linux-selinux
+    - qt5-qtwebsockets
   remove:
     - firefox
     - firefox-langpacks
