@@ -177,13 +177,13 @@ screens:
             - Permission Manager: com.github.tchx84.Flatseal
             - Audio Routing: org.pipewire.Helvum
             - Firmware Manager: org.gnome.Firmware
-            - Backup Manager: org.gnome.World.PikaBackup
             - System Inspector: io.github.nokse22.inspector
             - System Monitor: io.missioncenter.MissionCenter
             - Network Inspector: org.gabmus.whatip
             - ISO Image Writer: org.kde.isoimagewriter
             - Flatpak Cleaner: io.github.giantpinkrobots.flatsweep
             - Download Manager: org.kde.kget
+            - Backup Manager: com.borgbase.Vorta
         System Extras:
           description: System applications for all desktop environments.
           default: true
@@ -207,6 +207,7 @@ screens:
             - Transmission: com.transmissionbt.Transmission
             - Fragments: de.haeckerfelix.Fragments
             - Delunge: org.deluge_torrent.deluge
+            - Backup Manager (PikaBackup): org.gnome.World.PikaBackup
         Web Browsers:
           description: Additional browsers to complement or replace Firefox.
           default: false
