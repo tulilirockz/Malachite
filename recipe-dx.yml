@@ -36,10 +36,6 @@ rpm:
     - tmux
     - code-insiders
   remove:
-    - firefox
-    - firefox-langpacks
     - wpa_supplicant
-    - htop
-    - nvtop
 firstboot:
   yafti: true
