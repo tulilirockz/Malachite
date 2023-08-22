@@ -54,8 +54,7 @@ COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 COPY scripts /tmp/scripts
 
 # Run the build script, then clean up temp files and finalize container build.
-RUN rpm-ostree install /tmp/ublue-update.rpm /tmp/ublue-os-wallpapers.rpm && \
-        cp -r /usr/etc/yum.repos.d /etc && \
+RUN cp -r /usr/etc/yum.repos.d /etc && \
         chmod +x /tmp/scripts/build.sh && \
         /tmp/scripts/build.sh && \
         rm -rf /tmp/* /var/* && \
