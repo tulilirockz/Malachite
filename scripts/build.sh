@@ -75,9 +75,10 @@ FIRSTBOOT_LINK="/usr/etc/profile.d/ublue-firstboot.sh"
 if [[ "${YAFTI_ENABLED}" == "true" ]]; then
     echo "-- firstboot: Installing and enabling \"yafti\" --"
     pip install --prefix=/usr yafti
+    # Ignore this for Bazzite build
     # Create symlink to our profile script, which creates the per-user "autorun yafti" links.
-    mkdir -p "$(dirname "${FIRSTBOOT_LINK}")"
-    ln -s "${FIRSTBOOT_DATA}/launcher/login-profile.sh" "${FIRSTBOOT_LINK}"
+    #mkdir -p "$(dirname "${FIRSTBOOT_LINK}")"
+    #ln -s "${FIRSTBOOT_DATA}/launcher/login-profile.sh" "${FIRSTBOOT_LINK}"
 else
     echo "-- firstboot: Removing all \"firstboot\" components --"
     # Removes the script symlink that creates the per-user autostart symlinks.
