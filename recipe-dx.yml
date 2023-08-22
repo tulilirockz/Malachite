@@ -11,7 +11,7 @@ scripts:
     - dx-extras.sh
 rpm:
   repos:
-    - htthttps://terra.fyralabs.com/terra.repo
+    - https://terra.fyralabs.com/terra.repo
   install:
     - python3-pip
     - libadwaita
