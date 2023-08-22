@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
 Name=Yafti
-Exec=sh /usr/bin/refresh-yafti
+Exec=sh /usr/bin/yafti-malachite
 Icon=fish
 Categories=System

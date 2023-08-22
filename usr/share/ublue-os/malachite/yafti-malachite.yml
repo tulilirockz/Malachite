@@ -16,12 +16,6 @@ screens:
       show_terminal: true
       package_manager: yafti.plugin.run
       groups:
-        Gaming:
-          description: A container for gaming! - Sets up Steam, Lutris and more!
-          default: false
-          packages:
-            - Setup Gamebox Container: just --unstable setup gamebox
-            - Setup Steam-only session: just --unstable setup steam-session
         Nimbus:
           description: Development toolbox meant for coding!
           default: false

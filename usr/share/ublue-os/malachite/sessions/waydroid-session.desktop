@@ -1,5 +1,0 @@
-[Desktop Entry]
-Name=Waydroid On Wayland
-Comment=Containerized Android Operating System
-Exec=/usr/bin/waydroid-session
-Type=Application

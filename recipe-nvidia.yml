@@ -1,5 +1,5 @@
 name: malachite-nvidia
-base-image: ghcr.io/ublue-os/kinoite-nvidia
+base-image: ghcr.io/ublue-os/bazzite-nvidia
 fedora-version: 38
 description: Opinionated Fedora Silverblue-based operating system image
 
@@ -10,8 +10,6 @@ scripts:
     - autorun.sh
 rpm:
   repos:
-    - https://copr.fedorainfracloud.org/coprs/kylegospo/hl2linux-selinux/repo/fedora-%FEDORA_VERSION%/kylegospo-hl2linux-selinux-fedora-%FEDORA_VERSION%.repo
-    - https://copr.fedorainfracloud.org/coprs/kylegospo/wallpaper-engine-kde-plugin/repo/fedora-%FEDORA_VERSION%/kylegospo-wallpaper-engine-kde-plugin-fedora-%FEDORA_VERSION%.repo
   install:
     - python3-pip
     - libadwaita
@@ -25,14 +23,7 @@ rpm:
     - cockpit-navigator
     - cockpit-file-sharing
     - tailscale
-    - wallpaper-engine-kde-plugin
-    - hl2linux-selinux
-    - qt5-qtwebsockets
   remove:
-    - firefox
-    - firefox-langpacks
     - wpa_supplicant
-    - htop
-    - nvtop
 firstboot:
   yafti: true
