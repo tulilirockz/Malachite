@@ -11,6 +11,7 @@ scripts:
     - dx-extras.sh
 rpm:
   repos:
+    - htthttps://terra.fyralabs.com/terra.repo
   install:
     - python3-pip
     - libadwaita
@@ -26,7 +27,6 @@ rpm:
     - cockpit-ostree
     - tailscale
     - fish
-    - kdeconnectd
     - virt-manager
     - qemu
     - qemu-user-static
@@ -35,6 +35,9 @@ rpm:
     - qemu-img
     - tmux
     - code-insiders
+    - jetbrainsmono-nerd-fonts
+    - firacode-nerd-fonts
+    - firamono-nerd-fonts
   remove:
     - wpa_supplicant
 firstboot:
