@@ -1,5 +1,5 @@
 name: malachite-dx
-base-image: ghcr.io/ublue-os/kinoite-main
+base-image: ghcr.io/ublue-os/bazzite
 fedora-version: 38
 description: Opinionated Fedora Silverblue-based operating system image
 
@@ -11,8 +11,6 @@ scripts:
     - dx-extras.sh
 rpm:
   repos:
-    - https://copr.fedorainfracloud.org/coprs/kylegospo/hl2linux-selinux/repo/fedora-%FEDORA_VERSION%/kylegospo-hl2linux-selinux-fedora-%FEDORA_VERSION%.repo
-    - https://copr.fedorainfracloud.org/coprs/kylegospo/wallpaper-engine-kde-plugin/repo/fedora-%FEDORA_VERSION%/kylegospo-wallpaper-engine-kde-plugin-fedora-%FEDORA_VERSION%.repo
   install:
     - python3-pip
     - libadwaita
@@ -28,7 +26,6 @@ rpm:
     - cockpit-ostree
     - tailscale
     - fish
-    - waydroid
     - kdeconnectd
     - virt-manager
     - qemu
@@ -37,10 +34,6 @@ rpm:
     - libvirt
     - qemu-img
     - tmux
-    - butane
-    - wallpaper-engine-kde-plugin
-    - hl2linux-selinux
-    - qt5-qtwebsockets
     - code-insiders
   remove:
     - firefox
