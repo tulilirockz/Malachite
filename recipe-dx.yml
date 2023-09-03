@@ -33,6 +33,9 @@ rpm:
     - libvirt
     - qemu-img
     - tmux
+    - python3-websockets
+    - qt6-qtwebsockets
+    - qt5-qtwebsockets
   remove:
     - wpa_supplicant
 firstboot:
