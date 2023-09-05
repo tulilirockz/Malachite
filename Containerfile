@@ -53,6 +53,11 @@ COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 # Copy the build script and all custom scripts.
 COPY scripts /tmp/scripts
 
+# Add bootc as invaluable part of the ecosystem
+RUN wget https://copr.fedorainfracloud.org/coprs/rhcontainerbot/bootc/repo/fedora-"${FEDORA_MAJOR_VERSION}"/bootc-"${FEDORA_MAJOR_VERSION}".repo -O /etc/yum.repos.d/bootc.repo \
+        rpm-ostree install bootc && \
+        rm -f /etc/yum.repos.d/bootc.repo
+
 # Run the build script, then clean up temp files and finalize container build.
 RUN cp -r /usr/etc/yum.repos.d /etc && \
         chmod +x /tmp/scripts/build.sh && \
