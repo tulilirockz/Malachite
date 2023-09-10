@@ -96,6 +96,7 @@ echo "Registry to write: $IMAGE_REGISTRY"
 # Copy Name
 NAME=$(get_yaml_string '.name')
 cp /usr/share/ublue-os/cosign.pub /usr/etc/pki/containers/"$NAME".pub
+cp /usr/share/ublue-os/cosign.pub /usr/etc/pki/containers/cosign.pub
 
 # Work around the fact that jq doesn't have an "inplace" option
 FILE=/usr/etc/containers/policy.json
