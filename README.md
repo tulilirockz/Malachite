@@ -12,7 +12,7 @@ This was firstly created using `podman run -v "$(pwd)":/host:z -it ghcr.io/einoh
 
 To rebase an existing Silverblue/Kinoite installation to the latest build:
 
-- First rebase to the image unsigned, to get the proper signing keys and policies installed:
+- First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
   sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/tulilirockz/malachite:latest
   ```
