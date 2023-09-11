@@ -1,5 +1,13 @@
+webapp-manager:
+  distrobox-create -i fedora:latest -n webapps
+  distrobox-enter -n webapps -- sudo dnf update -y && sudo dnf install -y 'dnf-command(copr)'
+  distrobox-enter -n webapps -- sudo dnf copr enable kylegospo/webapp-manager
+  distrobox-enter -n webapps -- sudo dnf install webapp-manager
+  distrobox-enter -n webapps -- sudo rm /usr/bin/xdg-open /usr/bin/flatpak /usr/bin/firefox && sudo ln -s /usr/bin/distrobox-host-exec /usr/bin/xdg-open && sudo ln -s /usr/bin/distrobox-host-exec /usr/bin/flatpak && sudo ln -s /usr/bin/distrobox-host-exec /usr/bin/firefox
+  distrobox-enter -n webapps -- distrobox-export --app webapp-manager
+
 yakuake-autostart:
-  cp $HOME/.local/share/flatpak/app/org.kde.yakuake/x86_64/stable/active/export/share/applications/org.kde.yakuake.desktop $HOME/.config/autostart
+  ln -s $HOME/.local/share/flatpak/app/org.kde.yakuake/x86_64/stable/active/export/share/applications/org.kde.yakuake.desktop $HOME/.config/autostart
 
 nix:
   curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
@@ -52,8 +60,6 @@ positivo-touchscreen:
 
 nimbus:
   distrobox create -i ghcr.io/tulilirockz/nimbus:latest -n nimbus -Y
-  distrobox-enter -n nimbus -- 'paru -Syu --noconfirm visual-studio-code-bin'
-  distrobox-enter -n nimbus -- 'distrobox-export --app code && distrobox-export --bin /usr/sbin/code'
 
 gamebox:
   distrobox create -i ghcr.io/ublue-os/bazzite-arch:latest -n gamebox -Y

@@ -45,12 +45,12 @@ screens:
           description: Sets up my dotfiles and applies them directily to your system
           default: false
           packages:
-            - Setup remotes: just --unstable setup dotfiles
-        Ubuntu Theming:
-          description: Makes it so the Ubuntu theming is properly set up
+            - Setup: just --unstable setup dotfiles
+        Webapp Manager:
+          description: Sets up a webapp manager!
           default: false
           packages:
-            - Set Theming: just --unstable setup ubuntu-theme
+            - Setup: just --unstable setup webapp-manager
         Positivo Touch Screen:
           description: Adds udev rules for Positivo c464c-like laptops touchscreens
           default: false
@@ -135,7 +135,7 @@ screens:
           description: Core system applications for KDE
           default: true
           packages:
-            - Video Viewer (VLC): org.vlc.Vlc
+            - Video Viewer (VLC): org.vlc.VLC
             - Music Player (Elisa): org.kde.elisa
             - Image Viewer: org.kde.koko
             - Pipewire Viewer (QPWGraph): org.rncbc.qpwgraph
@@ -218,6 +218,7 @@ screens:
           description: "Rock and Stone!"
           default: false
           packages:
+            - Roblox (Launcher): io.github.vinegarhq.Vinegar
             - Veloren (Launcher): net.veloren.airshipper
             - Retroarch: org.libretro.RetroArch
             - Lutris: net.lutris.Lutris
@@ -248,6 +249,8 @@ screens:
           description: Make content for the Internet.
           default: false
           packages:
+            - Penpot Desktop: com.sudovanilla.penpot-desktop
+            - Frog: com.github.tenderowl.frog
             - DigiKam: org.kde.digikam
             - Halftone: io.github.tfuxu.Halftone
             - Contrast: org.gnome.design.Contrast
