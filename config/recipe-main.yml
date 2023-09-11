@@ -32,9 +32,6 @@ modules:
       - justfiles 
       - nix-installer 
 
-  - type: yafti
-    custom-flatpaks: 
-
   - type: script
     scripts:
       - signing.sh

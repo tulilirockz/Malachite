@@ -43,9 +43,6 @@ modules:
       - nix-installer 
       - devpod 
 
-  - type: yafti
-    custom-flatpaks: 
-
   - type: script
     scripts:
       - signing.sh
