@@ -31,7 +31,6 @@ modules:
       - fonts 
       - justfiles 
       - nix-installer 
-      - ublue-os-wallpapers
       - ublue-update 
 
   - type: yafti
