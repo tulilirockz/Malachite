@@ -33,11 +33,7 @@ jobs:
       id-token: write
     strategy:
       fail-fast: false
-
       matrix:
-# !!!
-        # Add recipes for all the images you want to build here.
-        # Don't add module configuration files, you will get errors.
         recipe:
           - recipe-main.yml
           - recipe-nvidia.yml
