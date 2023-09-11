@@ -41,7 +41,6 @@ modules:
       - fonts 
       - justfiles 
       - nix-installer 
-      - ublue-update 
       - devpod 
 
   - type: yafti

@@ -31,7 +31,6 @@ modules:
       - fonts 
       - justfiles 
       - nix-installer 
-      - ublue-update 
 
   - type: yafti
     custom-flatpaks: 
