@@ -33,6 +33,8 @@ modules:
       - qemu-img
       - ubuntu-nerd-fonts
       - ubuntumono-nerd-fonts
+      - vagrant
+      - vagrant-libvirt
     remove:
       - wpa_supplicant
 
