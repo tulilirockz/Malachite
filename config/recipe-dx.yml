@@ -51,7 +51,6 @@ modules:
 
   - type: script
     scripts:
-      - signing.sh
       - dx-extras.sh
       - networkmanager-realtek.sh
       - nodisplaylink.sh

@@ -6,7 +6,7 @@ image-version: latest
 modules:
   - type: files
     files:
-      - usr: /usr 
+      - usr: /usr
 
   - type: rpm-ostree
     repos:
@@ -16,8 +16,8 @@ modules:
       - podman-compose
       - cockpit
       - cockpit-podman
-      - cockpit-navigator        
-      - cockpit-file-sharing   
+      - cockpit-navigator
+      - cockpit-file-sharing
       - cockpit-pcp
       - cockpit-networkmanager
       - cockpit-ostree
@@ -28,14 +28,12 @@ modules:
 
   - type: bling
     install:
-      - fonts 
-      - justfiles 
-      - nix-installer 
+      - fonts
+      - justfiles
+      - nix-installer
 
   - type: script
     scripts:
-      - signing.sh
       - networkmanager-realtek.sh
       - nodisplaylink.sh
       - 99-bash-umask.sh
-
