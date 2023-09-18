@@ -35,10 +35,10 @@ modules:
       - ubuntumono-nerd-fonts
       - vagrant
       - vagrant-libvirt
-      - f28-backgrounds
-      - f29-backgrounds
-      - f30-backgrounds
-      - f33-backgrounds
+      - f28-backgrounds-kde
+      - f29-backgrounds-kde
+      - f30-backgrounds-kde
+      - f33-backgrounds-kde
     remove:
       - wpa_supplicant
 
