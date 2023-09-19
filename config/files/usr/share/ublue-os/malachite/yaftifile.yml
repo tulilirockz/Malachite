@@ -175,13 +175,13 @@ screens:
             - Network Inspector: org.gabmus.whatip
             - ISO Image Writer: org.kde.isoimagewriter
             - Flatpak Cleaner: io.github.giantpinkrobots.flatsweep
-            - Download Manager: org.kde.kget
             - Backup Manager: com.borgbase.Vorta
         System Extras:
           description: System applications for all desktop environments.
-          default: true
+          default: false
           packages:
             - EasyEffects: com.github.wwmm.easyeffects
+            - Download Manager: org.kde.kget
             - Syncthing GTK: me.kozec.syncthingtk
             - Bitwarden: com.bitwarden.desktop
             - Fedora Media Writer: org.fedoraproject.MediaWriter
