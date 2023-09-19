@@ -45,4 +45,3 @@ modules:
         - displaylink.service
         - pmie.service
         - pmlogger.service
-        - waydroid-container.service
