@@ -9,7 +9,7 @@ screens:
       icon: "/path/to/icon"
       description: |
         This guided installer will help you get started with your new system.
-  configure-turquoise:
+  configure-system:
     source: yafti.screen.package
     values:
       title: Configure Malachite System
@@ -22,40 +22,39 @@ screens:
           condition:
             run: distrobox list | grep -v nimbus
           packages:
-            - Setup Nimbus container: just --unstable setup nimbus
+            - Setup Nimbus container: just setup nimbus
         Nix Package Manager:
           description: Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible
           default: false
           packages:
-            - Install Nix Package Support: just --unstable setup nix
+            - Install Nix Package Support: just setup nix
         Waydroid:
           description: Android support with GApps, ARM translation, and Widevine out of the box
           default: false
           packages:
-            - Setup waydroid: just --unstable setup waydroid
-            - Setup waydroid-only session: just --unstable setup waydroid-session
-            - Setup shortcuts: just --unstable setup waydroid-shortcut
+            - Setup waydroid: just-malachite setup waydroid
+            - Setup waydroid-only session: just setup waydroid-session
+            - Setup shortcuts: just-malachite setup waydroid-shortcut
         Remote:
           description: Sets up proper remote access to this system!
           default: false
           packages:
-            - Setup Remotes: just --unstable setup remotes
-            - Setup Cockpit: just --unstable setup cockpit
+            - Setup Remotes: just-malachite setup remotes
         Dotfiles:
           description: Sets up my dotfiles and applies them directily to your system
           default: false
           packages:
-            - Setup: just --unstable setup dotfiles
+            - Setup: just-malachite setup dotfiles
         Webapp Manager:
           description: Sets up a webapp manager!
           default: false
           packages:
-            - Setup: just --unstable setup webapp-manager
+            - Setup: just-malachite setup webapp-manager
         Positivo Touch Screen:
           description: Adds udev rules for Positivo c464c-like laptops touchscreens
           default: false
           packages:
-            - Setup: just --unstable setup positivo-touchscreen
+            - Setup: just-malachite setup positivo-touchscreen
   can-we-modify-your-flatpaks:
     source: yafti.screen.consent
     values:
@@ -163,7 +162,7 @@ screens:
             - KMail: org.kde.kmail
             - Jukebox (JuK): org.kde.juk
             - Kontrast: org.kde.kontrast
-            - Media Player (Haruna): org.kde.harun
+            - Media Player (Haruna): org.kde.haruna
         System Apps:
           description: System applications for all desktop environments.
           default: true
