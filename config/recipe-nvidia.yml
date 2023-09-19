@@ -35,5 +35,17 @@ modules:
   - type: script
     scripts:
       - networkmanager-realtek.sh
-      - nodisplaylink.sh
       - 99-bash-umask.sh
+
+  - type: systemd
+    system:
+      enabled:
+        - podman.service
+        - podman.socket
+        - cockpit.service
+        - sshd.service
+      disabled:
+        - displaylink.service
+        - pmie.service
+        - pmlogger.service
+        - waydroid-container.service
