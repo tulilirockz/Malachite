@@ -48,10 +48,10 @@ modules:
       - justfiles
       - nix-installer
       - devpod
+      - container-tools
 
   - type: script
     scripts:
-      - dx-extras.sh
       - networkmanager-realtek.sh
 
   - type: systemd
