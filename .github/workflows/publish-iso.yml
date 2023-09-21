@@ -12,13 +12,8 @@ jobs:
       image: fedora:38
       options: --privileged
     steps:
-<<<<<<< HEAD:.github/workflows/publish-iso.yml
-      - uses: actions/checkout@v3
-      - name: Generate ISO
-=======
       - uses: actions/checkout@v4
       - name: Generate ISO  
->>>>>>> cb4160a (build(deps): bump actions/checkout from 3 to 4 (#146)):.github/workflows/release-iso.yml
         uses: ublue-os/isogenerator@main
         id: isogenerator
         with:
