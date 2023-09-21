@@ -1,5 +1,141 @@
 # Changelog
 
+## [2.0.0](https://github.com/tulilirockz/Malachite/compare/v1.0.0...v2.0.0) (2023-09-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove setup-flatpaks
+* remove autorun.sh
+* testing out bazzite build in dx
+* disable network protocols and kernel hardening
+
+### Features
+
+* add bootc to all images ([3ba3457](https://github.com/tulilirockz/Malachite/commit/3ba34577348a7276950375fce36fc11530b65f46))
+* add composes and kubernetes tools to -dx image ([a9acfa9](https://github.com/tulilirockz/Malachite/commit/a9acfa91fc6a1119e69e8f56e1c5799d2dc70021))
+* add nushell justfile ([57fcbc0](https://github.com/tulilirockz/Malachite/commit/57fcbc00610242e787a6b5e6aa104c9c9a9b1b60))
+* add support for nested modules ([#152](https://github.com/tulilirockz/Malachite/issues/152)) ([64a00c2](https://github.com/tulilirockz/Malachite/commit/64a00c20dc2e10400858ae085dcaa959300f73a9))
+* add support for nested modules ([#152](https://github.com/tulilirockz/Malachite/issues/152)) ([7e9fbab](https://github.com/tulilirockz/Malachite/commit/7e9fbab64ea4d113f04528a1dc67f4271581940d))
+* add support for nested modules ([#152](https://github.com/tulilirockz/Malachite/issues/152)) ([aee351f](https://github.com/tulilirockz/Malachite/commit/aee351fcbf2791541c4972d6a7260668f1436dc5))
+* add Vorta backup manager ([ceac232](https://github.com/tulilirockz/Malachite/commit/ceac232390ad3b2e4e730032af9058f7bf3949f2))
+* add waydroid mount script ([1c72776](https://github.com/tulilirockz/Malachite/commit/1c72776ac748ace710ab20bdeaaab15abb4d8ee0))
+* add webapp manager yafti step ([d15ae2a](https://github.com/tulilirockz/Malachite/commit/d15ae2a7c2ad8b14fb18358aeae23a3bd7796520))
+* added systemd and files module ([#142](https://github.com/tulilirockz/Malachite/issues/142)) ([cc90a91](https://github.com/tulilirockz/Malachite/commit/cc90a917336aa64b17aebb0d565999d839536476))
+* disable network protocols and kernel hardening ([64ae983](https://github.com/tulilirockz/Malachite/commit/64ae9830e1c57abd27b152a37503d123ceb96f14))
+* **dx:** add old fedora backgrounds ([20c7770](https://github.com/tulilirockz/Malachite/commit/20c7770c729ad6e94f0390beef43cb85e8b3a5df))
+* **dx:** add vagrant vm manager ([fe23dbd](https://github.com/tulilirockz/Malachite/commit/fe23dbd78dd67bf440fda0679daf866cef9c3792))
+* **dx:** add vscode repo to etc ([70f99a4](https://github.com/tulilirockz/Malachite/commit/70f99a42ec89bb8fdcf68050e9163e0d90e16b6d))
+* **dx:** add vscode to base ([dff322c](https://github.com/tulilirockz/Malachite/commit/dff322c702701494541b28c7b3967127ec5921cc))
+* **dx:** explicit qt5 websockets ([3eab385](https://github.com/tulilirockz/Malachite/commit/3eab38570ac2698ef0ec25331f19184f0cb5678b))
+* **dx:** nerdfonts for nvim development ([6586dfb](https://github.com/tulilirockz/Malachite/commit/6586dfb953525a1b0db4834b8044c377664796fc))
+* **dx:** ubuntu nerdfonts! ([c23bb69](https://github.com/tulilirockz/Malachite/commit/c23bb6929f2c2b91a095372b2880ac2b6ca6ef58))
+* **dx:** use bling container-tools module ([285445c](https://github.com/tulilirockz/Malachite/commit/285445c0a8711e14b9edd0ed35c7edc3d042986e))
+* enable dconf update service in installer ([c3bc555](https://github.com/tulilirockz/Malachite/commit/c3bc555ff4673a61588778e2d453332873f7191d))
+* enable developer-experience image ([ae20ad9](https://github.com/tulilirockz/Malachite/commit/ae20ad9d7e58d1d1ba820114fb7b83733e992d58))
+* integrate optfix into rpm-ostree module ([54cd605](https://github.com/tulilirockz/Malachite/commit/54cd605f113fde7948ee2c0814df46f0805b3782))
+* ISO build action ([#133](https://github.com/tulilirockz/Malachite/issues/133)) ([a2b8056](https://github.com/tulilirockz/Malachite/commit/a2b805669e61b73878cc54129a27f13f365a0a3d))
+* make if so every file is already into this repo and disable boot services ([915ff4d](https://github.com/tulilirockz/Malachite/commit/915ff4d947540ed690f4d2220558d53260e84bd4))
+* proper ordering in yaftifile ([308b202](https://github.com/tulilirockz/Malachite/commit/308b2023ae4126041aa0961b42a574a0a219e0aa))
+* remote-related services built into recipes ([e01cc9d](https://github.com/tulilirockz/Malachite/commit/e01cc9db91b419327e81634e1b44c74da1483332))
+* rpm-ostree module ([b2034c7](https://github.com/tulilirockz/Malachite/commit/b2034c7a1cd64baa781c9e56b85a2633cc3bf24b))
+* running modules from files ([d0c6dee](https://github.com/tulilirockz/Malachite/commit/d0c6deeb9b6e8620dea209dfb16da7c41855393b))
+* script runner module ([e03ac5d](https://github.com/tulilirockz/Malachite/commit/e03ac5de80b62f25db8031bf1a31a395e18ff3cf))
+* signing script ([1d7b14b](https://github.com/tulilirockz/Malachite/commit/1d7b14b38fe95f53bc82760de5a3575d764eec3e))
+* some ssh hardening ([74e3707](https://github.com/tulilirockz/Malachite/commit/74e3707f64f7ab6975f0ffe11f0fd5d243eea4ea))
+* **theming, ubuntu:** modular design for ubuntu theme - use a ini file to apply it ([7ea3918](https://github.com/tulilirockz/Malachite/commit/7ea3918c604e34d638b6d1282a1318b066440dcb))
+* ublue-os/bling module ([7b036d3](https://github.com/tulilirockz/Malachite/commit/7b036d3d1024da1ab29df1f4c1feea12a7a9d326))
+* yafti module ([290075c](https://github.com/tulilirockz/Malachite/commit/290075c1c77c7a936e247f6ee0c1f07c9464eea4))
+* yafti module installs yafti deps ([61ed483](https://github.com/tulilirockz/Malachite/commit/61ed4839f5e1bcdf97893f2899bdbe13b2f29db5))
+* **yafti:** descriptive naming and add a bunch of applications ([ca9070c](https://github.com/tulilirockz/Malachite/commit/ca9070c3ac290621838ca61e495a01853848c870))
+* **yafti:** granular waydroid + gaming config ([2bbf68b](https://github.com/tulilirockz/Malachite/commit/2bbf68b58338cda1e0415d09a674a5eccc0e0d16))
+
+
+### Bug Fixes
+
+* ? remove quotes, add wordsplitting ([4ce8e91](https://github.com/tulilirockz/Malachite/commit/4ce8e919b9d7186738a96d06470d43c6fe93613a))
+* add .sh suffix for dconf update service inst ([b3ddcd8](https://github.com/tulilirockz/Malachite/commit/b3ddcd885131453e18e63fa07a973787b0b24cd2))
+* add additional clarity to the location of files for the files module ([#151](https://github.com/tulilirockz/Malachite/issues/151)) ([db14ea0](https://github.com/tulilirockz/Malachite/commit/db14ea05e242a817bd10350c31c39059c1f5fbd7))
+* add additional clarity to the location of files for the files module ([#151](https://github.com/tulilirockz/Malachite/issues/151)) ([3291927](https://github.com/tulilirockz/Malachite/commit/329192728df530b80c7a64d098ba6dac1812a2b4))
+* add additional clarity to the location of files for the files module ([#151](https://github.com/tulilirockz/Malachite/issues/151)) ([44fb925](https://github.com/tulilirockz/Malachite/commit/44fb9251ec350dcb8a11873656629872dd8a72b1))
+* add kde wallpaper engine and determinate systems installer ([d33536b](https://github.com/tulilirockz/Malachite/commit/d33536bed0dd9c03d5cc9a2d826bd93396a5cd8e))
+* add missing setup procedures ([262658d](https://github.com/tulilirockz/Malachite/commit/262658d3c9d8a01838be0ad88f5e3c49e1fa765c))
+* add packages for cockpit to properly work ([1a2264d](https://github.com/tulilirockz/Malachite/commit/1a2264deddbbed76061953e584d0099478c1feac))
+* again erros with the bootc install command ([daa2343](https://github.com/tulilirockz/Malachite/commit/daa234356c0d90984a872372e9bab6959a7ebfdf))
+* also install and enable yafti in yafti module ([93cd25f](https://github.com/tulilirockz/Malachite/commit/93cd25fe017ffa5f5bc7ed846ff2bee544669510))
+* always get version tags ([#134](https://github.com/tulilirockz/Malachite/issues/134)) ([116e53a](https://github.com/tulilirockz/Malachite/commit/116e53a9e6bc183f174b06f8b54204be8d03dfab))
+* bad indentation in common-packages.yml ([055ef73](https://github.com/tulilirockz/Malachite/commit/055ef73ad5ae471e5a4447c338cbe62617b7620f))
+* bad yq command syntax ([7b9faf6](https://github.com/tulilirockz/Malachite/commit/7b9faf690c97f19e0de0373c3ed78722b7566498))
+* bling justfile installer nested just dir ([d2ab95c](https://github.com/tulilirockz/Malachite/commit/d2ab95c9e44116d07afa6b437bbcf4437ac11a05))
+* can't set readonly var after declaration ([14d78ee](https://github.com/tulilirockz/Malachite/commit/14d78ee2a7dd6023d338464bf12d1bd8e0b69bd7))
+* capitalize first character of comment ([#132](https://github.com/tulilirockz/Malachite/issues/132)) ([48c8250](https://github.com/tulilirockz/Malachite/commit/48c8250e1a084049a73e50fc34b4089a015002bc))
+* copy repo files to etc in build ([e961ea7](https://github.com/tulilirockz/Malachite/commit/e961ea7a7337914e80804ccf9ca5e4a71c1dbadf))
+* debian toolbox for standard CLI ([d1b0735](https://github.com/tulilirockz/Malachite/commit/d1b0735a6a8664707116640a276fcd80e112b271))
+* disable displaylink service (it slows down login) ([342558d](https://github.com/tulilirockz/Malachite/commit/342558d1faa8309b59e3d215ee5bf51ce23844bb))
+* don't output yaml array as json ([2740320](https://github.com/tulilirockz/Malachite/commit/2740320a51040493b18c4038301c1e0bc5554258))
+* don't run arbitrary commands with script ([dc97fa4](https://github.com/tulilirockz/Malachite/commit/dc97fa42015335ee46a84aa12f4d54621c70e64d))
+* dont add malformed tags if $MAJOR_VERSION is empty ([a1e2413](https://github.com/tulilirockz/Malachite/commit/a1e24135806294d562aa4837e3d0a49ce4805142))
+* **dx-bazzite:** ignore firstboot components setup in bazzite build ([cd633b9](https://github.com/tulilirockz/Malachite/commit/cd633b97007b587edd3415c11e8561247dd955c5))
+* **dx-bazzite:** remove wallpaper engine conflicting plugin ([c19c143](https://github.com/tulilirockz/Malachite/commit/c19c143266d4b51e72b6d378d2fc708787e03ddf))
+* **dx:** do not autoremove from bazzite ([046fe17](https://github.com/tulilirockz/Malachite/commit/046fe17d0067bd1415335adaf41f8329d8a58377))
+* **dx:** just use kate ([4addf8f](https://github.com/tulilirockz/Malachite/commit/4addf8f6d83e71cb512669c0f5f9c9790c0111e4))
+* **dx:** remove yaru-theme + gnome-shell ([14bb5cd](https://github.com/tulilirockz/Malachite/commit/14bb5cd2c56ca2255cc8b83ae3742986ee5b3868))
+* **dx:** typo in recipe ([e9de10f](https://github.com/tulilirockz/Malachite/commit/e9de10f58fe45aa69a54f072695cd0a91eeed19e))
+* **dx:** typo in terra repo url ([1611c5d](https://github.com/tulilirockz/Malachite/commit/1611c5d3cf84a542f5ed03347e0db2412f798bad))
+* give executable permission to scripts ([bbb1cc8](https://github.com/tulilirockz/Malachite/commit/bbb1cc8b88ed036ceda01d973f48ab8308ddfa12))
+* justfiles and yaftifile integration ([da267e7](https://github.com/tulilirockz/Malachite/commit/da267e7f71eb24290813331c32fd4ccd0faeac43))
+* lowercase image name for signing ([a700132](https://github.com/tulilirockz/Malachite/commit/a70013277e209a042d546d5a43ea3d39e26b1a08))
+* **main:** typo in image ([ae89c7b](https://github.com/tulilirockz/Malachite/commit/ae89c7bb20463b7ef3a9d8cb6613067c1e380ee0))
+* make get_yaml_array work ([2b633ff](https://github.com/tulilirockz/Malachite/commit/2b633ff5c87af2e3d47de0534fbe81abef04c553))
+* make sure cosign.pub exists in base image! ([2bb192b](https://github.com/tulilirockz/Malachite/commit/2bb192b01238ec49f6b06dcc175f0a321fb64d7a))
+* move globs outside of "" ([eb37ec3](https://github.com/tulilirockz/Malachite/commit/eb37ec35b4723fe1ea0d748e0a768ea39e0017a8))
+* newlines in rpm-ostree cmds errors ([e27eb25](https://github.com/tulilirockz/Malachite/commit/e27eb25b8014dc5fd22777565beb4bcbf0ad731c))
+* **nvidia, kinoite:** remove gnome related things in remove tag ([ca204bf](https://github.com/tulilirockz/Malachite/commit/ca204bf159afbbd7aa4af95e93622ab70ef173e4))
+* **nvidia, kinoite:** remove gnome-shell extensions ([e3bfbf3](https://github.com/tulilirockz/Malachite/commit/e3bfbf3e6c606a440c58a0f2d46a74077e9a6c4b))
+* **nvidia:** does not have waydroid ([5ac4eaa](https://github.com/tulilirockz/Malachite/commit/5ac4eaa42fe5ddf3f0337183d4c564b9503c22f0))
+* **nvidia:** removed service getting referenced ([55886d8](https://github.com/tulilirockz/Malachite/commit/55886d80159a98e71b18bf9d05d46641606ac256))
+* only!!! use kde for backgrounds ([57f9f86](https://github.com/tulilirockz/Malachite/commit/57f9f867b5c54e5747c64b4a447efc511a916c5b))
+* pmie and missing package errors in build ([1fa5cf8](https://github.com/tulilirockz/Malachite/commit/1fa5cf807d019828867119f914f3316e121554eb))
+* podman breaking because of policy changes ([8125736](https://github.com/tulilirockz/Malachite/commit/81257365ed882941ecae0c440ceaf9e06cb6ebfc))
+* properly inject new recipies! ([ca11802](https://github.com/tulilirockz/Malachite/commit/ca11802560b38190432fd3d31ecf0b55c7ff2bd6))
+* put .sh suffix outside of quotes? ([961dff3](https://github.com/tulilirockz/Malachite/commit/961dff33f41bc8ffedbf6d814c32715203ac2e26))
+* qt dependencies for kde wallpaper engine ([ba302a6](https://github.com/tulilirockz/Malachite/commit/ba302a682738f00a0da97d4ebb2dcae0c72ca4c9))
+* remove dconf update service so that configs will not be modified ([6681176](https://github.com/tulilirockz/Malachite/commit/6681176a65767b43ea2d93477652d006b6da740a))
+* remove GNOME Games, is deprecated ([fb6dc4d](https://github.com/tulilirockz/Malachite/commit/fb6dc4da908cb826b1a9b8020d59f4c2bbe71b18))
+* remove gnome-keyring conflict ([ab32ff4](https://github.com/tulilirockz/Malachite/commit/ab32ff4274fe380dd0cba99475654dace2166e1e))
+* remove newlines before wget ([60fa5ca](https://github.com/tulilirockz/Malachite/commit/60fa5ca3260e484328c3dd76c8edca7f92a8df11))
+* remove old signing config, using the one from the config repo instead ([#124](https://github.com/tulilirockz/Malachite/issues/124)) ([140e992](https://github.com/tulilirockz/Malachite/commit/140e99278bc3602784efad0deefc2ae9409ec40e))
+* remove remnants from earlier image signing method ([7a74af7](https://github.com/tulilirockz/Malachite/commit/7a74af7342b2480af07edbb4bca94b27bc091aa8))
+* remove ssh hardening procedures ([ceab9f6](https://github.com/tulilirockz/Malachite/commit/ceab9f689dd41c85ebb36517c1a95e9f428afe6b))
+* remove trailing newline from $ITEM ([949b06f](https://github.com/tulilirockz/Malachite/commit/949b06f1f9b44c960516537595e7dfaa1e435cf6))
+* remove trailing slashes from directory vars ([59e1604](https://github.com/tulilirockz/Malachite/commit/59e16045a857c2e93cc91f1dfe075b6122c52462))
+* remove ub update services in ub updater inst ([2208ea8](https://github.com/tulilirockz/Malachite/commit/2208ea88e50bb504c440783912dd0cd56f62d008))
+* remove unecessary scripts and perms from files ([84adf7f](https://github.com/tulilirockz/Malachite/commit/84adf7f4f115b106f0172b16861f9b9f434c3fa0))
+* removed issues in rpm-ostree module and ublue-update bling installer  ([#144](https://github.com/tulilirockz/Malachite/issues/144)) ([3f2ef28](https://github.com/tulilirockz/Malachite/commit/3f2ef2846ef8e4a4d53d278a0b60ec16b2f4da10))
+* rm newlines from rpm-ostree cmds ([00b6920](https://github.com/tulilirockz/Malachite/commit/00b692013311f1893ec3ce1006e3b6f6661342e6))
+* separation in url for bootc repo ([2cb7161](https://github.com/tulilirockz/Malachite/commit/2cb7161a12f9b28e9af214eab4f8f3bcd5d05be4))
+* some more bling installer file copy issues ([e5fdb30](https://github.com/tulilirockz/Malachite/commit/e5fdb304b4e2c0a2933288b5b4d336ab5a39d061))
+* steam not running via flatpak if it exists ([6d79749](https://github.com/tulilirockz/Malachite/commit/6d797496979ad58f656d3bbddfff8368e7d4e540))
+* testing out bazzite build in dx ([5dabda5](https://github.com/tulilirockz/Malachite/commit/5dabda527cb2b76823d64842a3d24c16dde71e6b))
+* typo in naming bash_umask ([698d0f0](https://github.com/tulilirockz/Malachite/commit/698d0f0f6970cd15e71a0323cda860cbe8ce9f4c))
+* ublue-os-wallpapers is already installed in bazzite ([dc367f3](https://github.com/tulilirockz/Malachite/commit/dc367f3b80bde0a086fa9e382617d3bc58ac2027))
+* wrong fetching location for yum.repos.d ([564572a](https://github.com/tulilirockz/Malachite/commit/564572a1a0be8b05e28623d2f63135292b62e0a2))
+* yafti is already setup in base image ([7b3013f](https://github.com/tulilirockz/Malachite/commit/7b3013f809614db6e486dfe7995535691115e6bc))
+* **yafti:** closing when finished installing programs + misc ([542b354](https://github.com/tulilirockz/Malachite/commit/542b3546733c4118722a3d66a65518bd26d374bd))
+* yeah also ublue-update is already in bazzite ([046e925](https://github.com/tulilirockz/Malachite/commit/046e92509facb0fcfa79b4259ec1b6ca8651824e))
+
+
+### Reverts
+
+* gnome-keyring removal ([9dbe4bc](https://github.com/tulilirockz/Malachite/commit/9dbe4bcd54ae017db150653067c11e5f27b1a904))
+* whatever remove bootc ([1c19293](https://github.com/tulilirockz/Malachite/commit/1c19293abf4e9db225ca02115585c15b934ca485))
+
+
+### Miscellaneous Chores
+
+* remove autorun.sh ([9e301ce](https://github.com/tulilirockz/Malachite/commit/9e301cec00721cab2dd021b24907dcf3caa6d8fb))
+* remove setup-flatpaks ([fc2f4bb](https://github.com/tulilirockz/Malachite/commit/fc2f4bb038f48fc7cd33b4c0f8fbba065617351b))
+
 ## 1.0.0 (2023-07-23)
 
 
