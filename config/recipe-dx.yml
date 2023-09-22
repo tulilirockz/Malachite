@@ -39,6 +39,8 @@ modules:
       - f29-backgrounds-kde
       - f30-backgrounds-kde
       - f33-backgrounds-kde
+      - butane
+      - make
     remove:
       - wpa_supplicant
 
@@ -57,8 +59,6 @@ modules:
   - type: systemd
     system:
       enabled:
-        - podman.service
-        - podman.socket
         - cockpit.service
         - sshd.service
       disabled:
@@ -66,3 +66,6 @@ modules:
         - pmie.service
         - pmlogger.service
         - waydroid-container.service
+    user:
+      enabled:
+        - podman.socket
