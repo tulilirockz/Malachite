@@ -217,6 +217,14 @@ screens:
           description: "Rock and Stone!"
           default: false
           packages:
+            - RetroDeck: net.retrodeck.retrodeck
+            - Minetest: net.minetest.Minetest
+            - OpenArena: ws.openarena.OpenArena
+            - Frogatto: com.frogatto.Frogatto
+            - Cave Story NX: com.gitlab.coringao.cavestory-nx
+            - Pekka Kana: net.pistegamez.PekkaKana2
+            - 0 AD: com.play0ad.zeroad
+            - Sonic Robo Blast: org.srb.SRB
             - Roblox (Launcher): io.github.vinegarhq.Vinegar
             - Veloren (Launcher): net.veloren.airshipper
             - Retroarch: org.libretro.RetroArch
@@ -244,6 +252,7 @@ screens:
             - Apostrophe: org.gnome.gitlab.somas.Apostrophe
             - Obsidian: md.obsidian.Obsidian
             - Logseq: com.logseq.Logseq
+            - Zim: org.zim_wiki.Zim
         Making Content:
           description: Make content for the Internet.
           default: false
