@@ -13,3 +13,9 @@ yafti:
 
 update-yadm:
   cd $HOME/.local/share/yadm-clone && git pull
+
+fix-libvirt:
+  sudo groupadd --system libvirt
+  sudo groupadd --system qemu
+  sudo usermod -a -G libvirt $USER
+  sudo usermod -a -G qemu $USER
