@@ -41,6 +41,7 @@ modules:
       - f33-backgrounds-kde
       - butane
       - make
+      - waypipe
     remove:
       - wpa_supplicant
 

@@ -23,6 +23,7 @@ modules:
       - cockpit-ostree
       - tailscale
       - tmux
+      - waypipe
     remove:
       - wpa_supplicant
 
