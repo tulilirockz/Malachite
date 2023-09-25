@@ -22,12 +22,12 @@ screens:
           condition:
             run: distrobox list | grep -v nimbus
           packages:
-            - Setup Nimbus container: just setup nimbus
+            - Setup Nimbus container: just-malachite setup nimbus
         Nix Package Manager:
           description: Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible
           default: false
           packages:
-            - Install Nix Package Support: just setup nix
+            - Install Nix Package Support: just-malachite setup nix
         Waydroid:
           description: Android support with GApps, ARM translation, and Widevine out of the box
           default: false

@@ -15,10 +15,10 @@ update-yadm:
   cd $HOME/.local/share/yadm-clone && git pull
 
 fix-libvirt:
-  sudo groupadd --system libvirt
-  sudo groupadd --system qemu
-  sudo usermod -a -G libvirt $USER
-  sudo usermod -a -G qemu $USER
+  sudo --askpass sh -c "groupadd --system libvirt && \
+  groupadd --system qemu && \
+  usermod -a -G libvirt $USER && \
+  usermod -a -G qemu $USER"
 
 push-to-registry IMAGE:
 	podman push localhost/{{IMAGE}}:latest localhost:5000/{{IMAGE}}:latest
