@@ -21,11 +21,11 @@ modules:
       - cockpit-pcp
       - cockpit-networkmanager
       - cockpit-ostree
-			- cockpit-machines
-			- cockpit-selinux
-			- cockpit-storaged
-			- cockpit-system
-			- cockpit-ws
+      - cockpit-machines
+      - cockpit-selinux
+      - cockpit-storaged
+      - cockpit-system
+      - cockpit-ws
       - tailscale
       - tmux
       - waypipe
