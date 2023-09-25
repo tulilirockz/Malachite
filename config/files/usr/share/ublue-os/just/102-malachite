@@ -1,8 +1,8 @@
 bling:
-  @just --unstable -f /usr/share/ublue-os/just/bling.just
+  @just --unstable -f /usr/share/ublue-os/just/100-bling.just
 
 setup:
-  @just --unstable -f /usr/share/ublue-os/just/setup.just
+  @just --unstable -f /usr/share/ublue-os/just/101-setup.just
 
 skel-to-home:
   rsync -avh /etc/skel "$HOME"
@@ -13,12 +13,6 @@ yafti:
 
 update-yadm:
   cd $HOME/.local/share/yadm-clone && git pull
-
-fix-libvirt:
-  sudo --askpass sh -c "groupadd --system libvirt && \
-  groupadd --system qemu && \
-  usermod -a -G libvirt $USER && \
-  usermod -a -G qemu $USER"
 
 push-to-registry IMAGE:
 	podman push localhost/{{IMAGE}}:latest localhost:5000/{{IMAGE}}:latest

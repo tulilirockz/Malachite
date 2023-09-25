@@ -1,4 +1,10 @@
-yakuake-autostart:
+libvirt:
+  sudo --askpass sh -c "groupadd --system libvirt && \
+  groupadd --system qemu && \
+  usermod -a -G libvirt $USER && \
+  usermod -a -G qemu $USER" 
+
+yakuake:
   ln -s $HOME/.local/share/flatpak/app/org.kde.yakuake/x86_64/stable/active/export/share/applications/org.kde.yakuake.desktop $HOME/.config/autostart
 
 waydroid-shortcut:
@@ -28,8 +34,7 @@ dotfiles:
 
 remotes:
   systemctl enable --now cockpit.socket sshd tailscaled
-  sudo --askpass sh -c "firewall-cmd --add-service=ssh ; firewall-cmd --add-service=cockpit ; firewall-cmd --runtime-to-permanent ; firewall-cmd --reload"
-  sudo --askpass tailscale up
+  sudo --askpass sh -c "firewall-cmd --add-service=ssh ; firewall-cmd --add-service=cockpit ; firewall-cmd --runtime-to-permanent ; firewall-cmd --reload ; tailscale up"
   
 positivo-touchscreen:
   printf 'SUBSYSTEM=="input", KERNEL=="event[0-9]*", ENV{ID_INPUT_TOUCHSCREEN}=="1", ENV{WL_OUTPUT}="silead_ts", ENV{LIBINPUT_CALIBRATION_MATRIX}="2.0994971271086835 0.0 -0.009475882227217559 0.0 3.2251959199264215 -0.002555450541782298 0.0 0.0 1.0"' | sudo --askpass tee -a /etc/udev/rules.d/99-positivo-touchscreen.rules
@@ -45,4 +50,3 @@ base-theme:
 
 ubuntu-theme:
   dconf load / < /usr/share/ublue-os/malachite/dconf/ubuntu.ini
-
