@@ -1,7 +1,7 @@
 name: malachite-nvidia
 description: Opinionated Fedora Silverblue-based operating system image
-base-image: ghcr.io/ublue-os/bazzite-nvidia
-image-version: latest
+base-image: ghcr.io/ublue-os/kinoite-nvidia
+image-version: 39
 
 modules:
   - type: files
@@ -38,6 +38,7 @@ modules:
       - fonts
       - justfiles
       - nix-installer
+      - ublue-update
 
   - type: script
     scripts:

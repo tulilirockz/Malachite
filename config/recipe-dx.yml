@@ -1,7 +1,7 @@
 name: malachite-dx
 description: Opinionated Fedora Silverblue-based operating system image
-base-image: ghcr.io/ublue-os/bazzite
-image-version: latest
+base-image: ghcr.io/ublue-os/kinoite-main
+image-version: 39
 
 modules:
   - type: files
@@ -64,6 +64,7 @@ modules:
       - nix-installer
       - devpod
       - container-tools
+      - ublue-update
 
   - type: script
     scripts:
