@@ -54,6 +54,7 @@ modules:
       - genisoimage
       - lxc
       - p7zip
+      - waydroid
     remove:
       - wpa_supplicant
 

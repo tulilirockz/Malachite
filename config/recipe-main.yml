@@ -30,6 +30,7 @@ modules:
       - tmux
       - waypipe
       - cage
+      - waydroid
     remove:
       - wpa_supplicant
 
