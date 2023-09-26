@@ -15,6 +15,9 @@ modules:
       - iwd
       - podman-docker
       - podman-compose
+      - podman-plugins
+      - podman-tui
+      - podmansh
       - cockpit
       - cockpit-podman
       - cockpit-navigator
@@ -48,6 +51,9 @@ modules:
       - make
       - waypipe
       - cage
+      - genisoimage
+      - lxc
+      - p7zip
     remove:
       - wpa_supplicant
 
