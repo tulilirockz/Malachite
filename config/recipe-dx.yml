@@ -68,6 +68,7 @@ modules:
 
   - type: script
     scripts:
+      - signing.sh
       - networkmanager-realtek.sh
 
   - type: systemd
