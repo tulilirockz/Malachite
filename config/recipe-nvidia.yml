@@ -7,6 +7,7 @@ modules:
   - type: files
     files:
       - usr: /usr
+      - laptop: /usr
 
   - type: rpm-ostree
     repos:
@@ -39,6 +40,7 @@ modules:
       - justfiles
       - nix-installer
       - ublue-update
+      - laptop
 
   - type: script
     scripts:
