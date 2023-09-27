@@ -1,3 +1,7 @@
+assemble:
+  echo 'Assembling and replacing distroboxes ...'
+  distrobox assemble create --replace --file /etc/distrobox/distrobox.ini
+
 libvirt:
   sudo --askpass sh -c "groupadd --system libvirt && \
   groupadd --system qemu && \
@@ -21,9 +25,6 @@ fish:
   sudo --askpass usermod -s /usr/bin/fish "$USER"
   curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
   fish -c 'omf install bobthefish'
-
-nushell:
-  sudo --askpass usermod -s /usr/bin/nushell "$USER"
 
 dotfiles:
   git clone https://github.com/TheLocehiliosan/yadm.git ~/.local/share/yadm-clone
