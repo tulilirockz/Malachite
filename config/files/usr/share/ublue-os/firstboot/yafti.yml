@@ -22,50 +22,51 @@ screens:
           condition:
             run: distrobox list | grep -v nimbus
           packages:
-            - Setup Nimbus container: just-malachite setup assemble 
+            - Setup Nimbus container: just setup assemble
         Nix Package Manager:
           description: Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible
           default: false
           packages:
-            - Install Nix Package Support: just-malachite setup nix
+            - Install Nix Package Support: just setup nix
         Waydroid:
           description: Android support with GApps, ARM translation, and Widevine out of the box
           default: false
           packages:
-            - Setup waydroid: just-malachite setup waydroid
+            - Setup waydroid: just setup waydroid
             - Setup waydroid-only session: just setup waydroid-session
-            - Setup shortcuts: just-malachite setup waydroid-shortcut
+            - Setup shortcuts: just setup waydroid-shortcut
         Remote:
           description: Sets up proper remote access to this system!
           default: false
           packages:
-            - Setup Remotes: just-malachite setup remotes
+            - Setup Remotes: just setup remotes
         Dotfiles:
           description: Sets up my dotfiles and applies them directily to your system
           default: false
           packages:
-            - Setup: just-malachite setup dotfiles
+            - Setup: just setup dotfiles
         Webapp Manager:
           description: Sets up a webapp manager!
           default: false
           packages:
-            - Setup: just-malachite setup webapp-manager
+            - Setup: just setup webapp-manager
         Positivo Touch Screen:
           description: Adds udev rules for Positivo c464c-like laptops touchscreens
           default: false
           packages:
-            - Setup: just-malachite setup positivo-touchscreen
-        Enable Libvirtd Groups:
+            - Setup: just setup positivo-touchscreen
+        Libvirtd:
           description: Adds libvirtd and qemu groups to your user for usage with virt-manager
           default: false
           packages:
-            - Setup: just-malachite setup libvirt
+            - Setup Groups: just setup libvirt
+            - Setup Session: just setup virt-manager-session
         Yakuake:
           description: Sets up the Yakuake terminal
           default: false
           packages:
             - Install: flatpak install -y --user flathub yakuake
-            - Setup: just-malachite setup yakuake
+            - Setup: just setup yakuake
   can-we-modify-your-flatpaks:
     source: yafti.screen.consent
     values:
