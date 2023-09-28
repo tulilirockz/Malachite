@@ -1,2 +1,0 @@
-#!/bin/sh
-/usr/bin/just -f /usr/share/ublue-os/just/102-malachite.just --unstable $@

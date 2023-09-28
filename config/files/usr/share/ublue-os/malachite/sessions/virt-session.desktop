@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Waydroid on Cage
+Comment=Waydroid-only cage-based session
+Exec=/usr/bin/virt-session
+Type=Application

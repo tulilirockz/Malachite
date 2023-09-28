@@ -1,3 +1,14 @@
+# Launch Waydroid configuration helper
+configure-waydroid:
+  #!/usr/bin/env bash
+  git clone https://github.com/casualsnek/waydroid_script.git --depth 1 /tmp/waydroid_script
+  python -m venv /tmp/waydroid_script/venv
+  source /tmp/waydroid_script/venv/bin/activate
+  sudo pip install -r /tmp/waydroid_script/requirements.txt
+  sudo /tmp/waydroid_script/main.py
+  deactivate
+  sudo rm -rf /tmp/waydroid_script
+
 assemble:
   echo 'Assembling and replacing distroboxes ...'
   distrobox assemble create --replace --file /etc/distrobox/distrobox.ini
@@ -7,6 +18,9 @@ libvirt:
   groupadd --system qemu && \
   usermod -a -G libvirt $USER && \
   usermod -a -G qemu $USER" 
+
+virt-manager-session:
+  sudo --askpass sh -c 'mkdir -p /usr/local/share/wayland-sessions && cp /usr/share/ublue-os/malachite/sessions/virt-session.desktop /usr/local/share/wayland-sessions'
 
 yakuake:
   ln -s $HOME/.local/share/flatpak/app/org.kde.yakuake/x86_64/stable/active/export/share/applications/org.kde.yakuake.desktop $HOME/.config/autostart

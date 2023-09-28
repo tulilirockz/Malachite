@@ -1,3 +1,2 @@
 #!/bin/sh
 cage flatpak run --command=steam com.valvesoftware.Steam -gamepadui
-sleep 5

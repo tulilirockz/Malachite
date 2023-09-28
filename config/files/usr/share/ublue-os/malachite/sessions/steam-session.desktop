@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Steam GamepadUI
+Name=Steam GamepadUI on Cage
 Comment=Steam GamepadUI session
 Exec=/usr/bin/steam-session
 Type=Application
