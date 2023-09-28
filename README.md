@@ -13,26 +13,26 @@ This was firstly created using `podman run -v "$(pwd)":/host:z -it ghcr.io/einoh
 To rebase an existing Silverblue/Kinoite installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/tulilirockz/malachite:latest
-  ```
+```sh
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/tulilirockz/malachite:latest
+```
 - Reboot to complete the rebase:
-  ```
+```sh
   systemctl reboot
-  ```
+```
 - Then rebase to the signed image, like so:
-  ```
-  sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/tulilirockz/malachite:latest
-  ```
+```sh
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/tulilirockz/malachite:latest
+```
 - Reboot again to complete the installation
-  ```
+```sh
   systemctl reboot
-  ```
+```
 
 This repository builds date tags as well, so if you want to rebase to a particular day's build:
 
-```
-sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/tulilirockz/malachite:20230722
+```sh
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/tulilirockz/malachite:20230722
 ```
 
 ## Nvidia
@@ -42,5 +42,14 @@ If you are going to use nvidia builds, make sure to follow all the instructions 
 Then, rebase to my build!
 
 ```sh
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/tulilirockz/malachite-nvidia:latest
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/tulilirockz/malachite-nvidia:latest
+```
+
+## Developer Experience
+
+This image includes a `-dx` variant with Virtualization utilities, LXC, LXD, Devpod (for remote work), Waydroid, and many other utilities for developers.
+
+In order to rebase, use this command:
+```sh
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/tulilirockz/malachite-dx:latest
 ```
