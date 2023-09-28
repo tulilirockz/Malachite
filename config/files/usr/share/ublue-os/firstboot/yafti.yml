@@ -55,18 +55,23 @@ screens:
           default: false
           packages:
             - Setup: just setup positivo-touchscreen
-        Libvirtd:
-          description: Adds libvirtd and qemu groups to your user for usage with virt-manager
-          default: false
-          packages:
-            - Setup Groups: just setup libvirt
-            - Setup Session: just setup virt-manager-session
         Yakuake:
           description: Sets up the Yakuake terminal
           default: false
           packages:
             - Install: flatpak install -y --user flathub yakuake
             - Setup: just setup yakuake
+        Libvirtd (DX):
+          description: Adds libvirtd and qemu groups to your user for usage with virt-manager
+          default: false
+          packages:
+            - Setup Groups: just setup libvirt
+            - Setup Session: just setup virt-manager-session
+        LXC and LXD (DX):
+          description: Sets up the LXC and LXD
+          default: false
+          packages:
+            - Setup: just setup lxc
   can-we-modify-your-flatpaks:
     source: yafti.screen.consent
     values:

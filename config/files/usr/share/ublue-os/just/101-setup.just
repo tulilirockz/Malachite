@@ -13,6 +13,13 @@ assemble:
   echo 'Assembling and replacing distroboxes ...'
   distrobox assemble create --replace --file /etc/distrobox/distrobox.ini
 
+lxc:
+  sudo --askpass sh -c "groupadd --system lxc && \
+  usermod -a -G lxc $USER && \
+  echo "root:1000000:65536" >> /etc/subuid && \
+  echo "root:1000000:65536" >> /etc/subgid && \
+  systemctl enable lxd && systemctl start lxd"
+
 libvirt:
   sudo --askpass sh -c "groupadd --system libvirt && \
   groupadd --system qemu && \
