@@ -11,7 +11,6 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/bobslept/nerd-fonts/repo/fedora-%OS_VERSION%/bobslept-nerd-fonts-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/ganto/lxc4/repo/fedora-%OS_VERSION%/ganto-lxc4-fedora-%OS_VERSION%.repo
     install:
       - iwd
       - podman-docker
@@ -52,10 +51,10 @@ modules:
       - waypipe
       - cage
       - genisoimage
-      - lxc
-      - lxd
-      - lxd-agent
       - p7zip
+      - snapd
+      - snap-confine
+      - plasma-discover-snap
       - waydroid
       - virt-manager
       - virt-bootstrap
