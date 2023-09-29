@@ -60,7 +60,6 @@ modules:
       - virt-manager
       - virt-bootstrap
       - virt-top
-      - virt-dib
       - virt-backup
       - virt-install
       - virt-top
