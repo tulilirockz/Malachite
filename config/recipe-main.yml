@@ -4,6 +4,8 @@ base-image: ghcr.io/ublue-os/kinoite-main
 image-version: 39
 
 modules:
+  - type: yafti
+
   - type: files
     files:
       - usr: /usr
@@ -31,6 +33,7 @@ modules:
       - waypipe
       - cage
       - waydroid
+      - rclone
     remove:
       - wpa_supplicant
 

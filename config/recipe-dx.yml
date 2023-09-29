@@ -67,6 +67,7 @@ modules:
       - virt-what
       - virt-v2v
       - virt-p2v
+      - rclone
     remove:
       - wpa_supplicant
 

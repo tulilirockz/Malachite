@@ -4,6 +4,8 @@ base-image: ghcr.io/ublue-os/kinoite-nvidia
 image-version: 39
 
 modules:
+  - type: yafti
+
   - type: files
     files:
       - usr: /usr
@@ -30,6 +32,7 @@ modules:
       - tmux
       - waypipe
       - cage
+      - rclone
     remove:
       - wpa_supplicant
 
