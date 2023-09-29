@@ -86,7 +86,6 @@ modules:
       enabled:
         - cockpit.service
         - sshd.service
-        - lxd-agent.service
       disabled:
         - pmie.service
         - pmlogger.service
