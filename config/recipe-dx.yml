@@ -73,7 +73,6 @@ modules:
     scripts:
       - signing.sh
       - networkmanager-realtek.sh
-      - starship.sh
 
   - type: systemd
     system:
