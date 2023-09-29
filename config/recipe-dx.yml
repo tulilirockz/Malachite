@@ -34,7 +34,6 @@ modules:
       - tailscale
       - tmux
       - fish
-      - virt-manager
       - qemu
       - qemu-user-static
       - qemu-user-binfmt
@@ -58,6 +57,16 @@ modules:
       - lxd-agent
       - p7zip
       - waydroid
+      - virt-manager
+      - virt-bootstrap
+      - virt-top
+      - virt-dib
+      - virt-backup
+      - virt-install
+      - virt-top
+      - virt-what
+      - virt-v2v
+      - virt-p2v
     remove:
       - wpa_supplicant
 
