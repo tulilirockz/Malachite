@@ -47,8 +47,6 @@ modules:
         - cockpit.service
         - sshd.service
       disabled:
-        - pmie.service
-        - pmlogger.service
         - waydroid-container.service
     user:
       enabled:

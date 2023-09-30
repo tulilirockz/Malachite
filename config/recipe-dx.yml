@@ -41,7 +41,6 @@ modules:
       - cage
       - snapd
       - snap-confine
-      - plasma-discover-snap
       - waydroid
       - virt-manager
       - virt-bootstrap
