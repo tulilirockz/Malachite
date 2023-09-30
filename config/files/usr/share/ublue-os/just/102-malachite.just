@@ -1,15 +1,9 @@
-bling:
-  @just --unstable -f /usr/share/ublue-os/just/100-bling.just
-
-setup:
-  @just --unstable -f /usr/share/ublue-os/just/101-setup.just
-
 skel-to-home:
   rsync -avh /etc/skel "$HOME"
 
 yafti:
-  rm -r "$HOME/.config/yafti"
-  yafti /usr/share/ublue-os/malachite/yaftifile.yml
+  rm -rf "$HOME/.config/yafti"
+  yafti /usr/share/ublue-os/firstboot/yafti.yml
 
 update-yadm:
   cd $HOME/.local/share/yadm-clone && git pull
