@@ -38,6 +38,7 @@ jobs:
           - recipe-main.yml
           - recipe-nvidia.yml
           - recipe-dx.yml
+          - recipe-laptop.yml
 
     steps:
       - name: Maximize build space
