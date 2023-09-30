@@ -1,6 +1,6 @@
 name: malachite-laptop
 description: Opinionated Fedora Silverblue-based operating system image
-base-image: ghcr.io/ublue-os/bazzite-main
+base-image: ghcr.io/ublue-os/bazzite-deck-gnome
 image-version: latest
 
 modules:
