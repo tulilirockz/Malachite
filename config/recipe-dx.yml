@@ -11,8 +11,23 @@ modules:
       - usr: /usr
 
   - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/bobslept/nerd-fonts/repo/fedora-%OS_VERSION%/bobslept-nerd-fonts-fedora-%OS_VERSION%.repo
     install:
+      - iwd
       - podman-compose
+      - cockpit
+      - cockpit-podman
+      - cockpit-navigator
+      - cockpit-file-sharing
+      - cockpit-pcp
+      - cockpit-networkmanager
+      - cockpit-ostree
+      - cockpit-machines
+      - cockpit-selinux
+      - cockpit-storaged
+      - cockpit-system
+      - cockpit-ws
       - tmux
       - vagrant
       - vagrant-libvirt
@@ -26,7 +41,9 @@ modules:
       - cage
       - snapd
       - snap-confine
+      - plasma-discover-snap
       - waydroid
+      - virt-manager
       - virt-bootstrap
       - virt-top
       - virt-backup
@@ -37,6 +54,7 @@ modules:
       - virt-p2v
       - rclone
     remove:
+      - wpa_supplicant
 
   - type: bling
     install:
