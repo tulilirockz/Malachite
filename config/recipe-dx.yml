@@ -15,11 +15,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/bobslept/nerd-fonts/repo/fedora-%OS_VERSION%/bobslept-nerd-fonts-fedora-%OS_VERSION%.repo
     install:
       - iwd
-      - podman-docker
       - podman-compose
-      - podman-plugins
-      - podman-tui
-      - podmansh
       - cockpit
       - cockpit-podman
       - cockpit-navigator
