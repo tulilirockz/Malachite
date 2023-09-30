@@ -1,6 +1,6 @@
 name: malachite-dx
 description: Opinionated Fedora Silverblue-based operating system image
-base-image: ghcr.io/ublue-os/bluefin-dx
+base-image: ghcr.io/ublue-os/bluefin-framework
 image-version: 39
 
 modules:
@@ -12,31 +12,17 @@ modules:
 
   - type: rpm-ostree
     install:
+      - iwd
       - podman-compose
       - tmux
-      - vagrant
-      - vagrant-libvirt
-      - f28-backgrounds-gnome
-      - f29-backgrounds-gnome
-      - f30-backgrounds-gnome
-      - f33-backgrounds-gnome
-      - butane
-      - make
       - waypipe
       - cage
       - snapd
       - snap-confine
       - waydroid
-      - virt-bootstrap
-      - virt-top
-      - virt-backup
-      - virt-install
-      - virt-top
-      - virt-what
-      - virt-v2v
-      - virt-p2v
       - rclone
     remove:
+      - wpa_supplicant
 
   - type: bling
     install:
