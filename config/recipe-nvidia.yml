@@ -10,12 +10,14 @@ modules:
 
   - type: rpm-ostree
     repos:
+      - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
     install:
       - tailscale
       - tmux
       - waypipe
       - cage
       - rclone
+      - onedriver
     remove:
 
   - type: bling

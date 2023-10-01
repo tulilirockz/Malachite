@@ -12,6 +12,7 @@ modules:
 
   - type: rpm-ostree
     repos:
+      - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
     install:
       - podman-docker
       - podman-compose
@@ -33,6 +34,7 @@ modules:
       - cage
       - waydroid
       - rclone
+      - onedriver
     remove:
 
   - type: bling

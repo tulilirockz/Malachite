@@ -9,6 +9,8 @@ modules:
       - usr: /usr
 
   - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
     install:
       - iwd
       - podman-compose
@@ -23,6 +25,7 @@ modules:
       - snap-confine
       - waydroid
       - rclone
+      - onedriver
     remove:
       - wpa_supplicant
 
