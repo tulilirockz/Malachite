@@ -1,6 +1,6 @@
 name: malachite
 description: Opinionated Fedora Silverblue-based operating system image
-base-image: ghcr.io/ublue-os/kinoite-main
+base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 39
 
 modules:
@@ -15,17 +15,8 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
     install:
       - podman-docker
-      - podman-compose
       - cockpit
       - cockpit-podman
-      - cockpit-navigator
-      - cockpit-file-sharing
-      - cockpit-pcp
-      - cockpit-networkmanager
-      - cockpit-ostree
-      - cockpit-machines
-      - cockpit-selinux
-      - cockpit-storaged
       - cockpit-system
       - cockpit-ws
       - tailscale
@@ -43,7 +34,6 @@ modules:
       - justfiles
       - nix-installer
       - ublue-update
-      - laptop
 
   - type: script
     scripts:
@@ -56,6 +46,4 @@ modules:
         - cockpit.service
         - sshd.service
       disabled:
-        - pmie.service
-        - pmlogger.service
         - waydroid-container.service
