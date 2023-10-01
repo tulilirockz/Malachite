@@ -35,5 +35,4 @@ modules:
     system:
       enabled:
       disabled:
-        - pmie.service
-        - pmlogger.service
+        - displaylink.service
