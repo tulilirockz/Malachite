@@ -5,4 +5,3 @@ Exec=/usr/bin/waydroid-forcestart
 Icon=waydroid
 Categories=X-WayDroid-App;
 X-Purism-FormFactor=Workstation;Mobile;
-

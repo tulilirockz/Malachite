@@ -9,6 +9,11 @@ configure-waydroid:
   deactivate
   sudo rm -rf /tmp/waydroid_script
 
+onedrive:
+  rclone config
+  cp /usr/share/ublue-os/malachite/applications/AutostartOnedriveSync.desktop $HOME/.config/autostart
+  cp /usr/share/ublue-os/malachite/applications/RestartOnedrive.desktop $HOME/.local/share/applications
+
 assemble:
   echo 'Assembling and replacing distroboxes ...'
   distrobox assemble create --replace --file /etc/distrobox/distrobox.ini

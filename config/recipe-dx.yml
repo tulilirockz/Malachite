@@ -14,7 +14,6 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/bobslept/nerd-fonts/repo/fedora-%OS_VERSION%/bobslept-nerd-fonts-fedora-%OS_VERSION%.repo
     install:
-      - iwd
       - podman-compose
       - cockpit
       - cockpit-podman
@@ -54,7 +53,6 @@ modules:
       - virt-p2v
       - rclone
     remove:
-      - wpa_supplicant
 
   - type: bling
     install:

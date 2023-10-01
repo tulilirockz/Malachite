@@ -11,14 +11,12 @@ modules:
   - type: rpm-ostree
     repos:
     install:
-      - iwd
       - tailscale
       - tmux
       - waypipe
       - cage
       - rclone
     remove:
-      - wpa_supplicant
 
   - type: bling
     install:
