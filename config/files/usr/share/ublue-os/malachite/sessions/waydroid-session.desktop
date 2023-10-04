@@ -1,5 +1,0 @@
-[Desktop Entry]
-Name=Waydroid on Cage
-Comment=Waydroid-only cage-based session
-Exec=/usr/bin/waydroid-session
-Type=Application

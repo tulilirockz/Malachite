@@ -27,51 +27,38 @@ screens:
           description: Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible
           default: false
           packages:
-            - Install Nix Package Support: just setup nix
-        Waydroid:
-          description: Android support with GApps, ARM translation, and Widevine out of the box
-          default: false
-          packages:
-            - Setup waydroid: just setup waydroid
-            - Setup waydroid-only session: just setup waydroid-session
-            - Setup shortcuts: just setup waydroid-shortcut
+            - Install Nix Package Support: pkexec /usr/bin/ublue-nix-installer
         Remote:
           description: Sets up proper remote access to this system!
           default: false
           packages:
-            - Setup Remotes: just setup remotes
+            - Setup Remotes: just remotes-enable
         Dotfiles:
           description: Sets up my dotfiles and applies them directily to your system
           default: false
           packages:
-            - Setup: just setup dotfiles
-        Webapp Manager:
-          description: Sets up a webapp manager!
-          default: false
-          packages:
-            - Setup: just setup webapp-manager
-        Positivo Touch Screen:
+            - Setup: just dotfiles-clone
+        Positivo Touch Screen (LAPTOP):
           description: Adds udev rules for Positivo c464c-like laptops touchscreens
           default: false
           packages:
-            - Setup: just setup positivo-touchscreen
-        Yakuake:
-          description: Sets up the Yakuake terminal
+            - Setup: just positivo-touchscreen
+        Extra Sessions:
+          description: Sets up the Ubuntu theme
           default: false
           packages:
-            - Install: flatpak install -y --user flathub yakuake
-            - Setup: just setup yakuake
+            - Setup: just extra-sessions
+        Ubuntu theming (GNOME):
+          description: Sets up the Ubuntu theme
+          default: false
+          packages:
+            - Setup: just ubuntu-theme
         Libvirtd (DX):
           description: Adds libvirtd and qemu groups to your user for usage with virt-manager
           default: false
           packages:
             - Setup Groups: just setup libvirt
             - Setup Session: just setup virt-manager-session
-        LXC and LXD (DX):
-          description: Sets up the LXC and LXD
-          default: false
-          packages:
-            - Setup: just setup lxc
   can-we-modify-your-flatpaks:
     source: yafti.screen.consent
     values:
@@ -84,18 +71,7 @@ screens:
         - run: flatpak remote-delete --system --force fedora
         - run: flatpak remote-delete --user --force fedora
         - run: flatpak remove --system --noninteractive --all
-        - run: flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
         - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
-  check-system-flathub:
-    source: yafti.screen.consent
-    values:
-      title: Missing Flathub Repository (System)
-      condition:
-        run: flatpak remotes --system --columns=name | grep flathub | wc -l | grep '^0$'
-      description: |
-        We have detected that you don't have Flathub's repository on your system. We will now add that repository to your system-wide list.
-      actions:
-        - run: flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
   check-user-flathub:
     source: yafti.screen.consent
     values:

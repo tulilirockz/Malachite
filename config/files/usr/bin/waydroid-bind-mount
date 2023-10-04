@@ -1,5 +1,5 @@
 #!/bin/sh
-sudo --askpass sh -c 'mount --bind ~/Documents ~/.local/share/waydroid/data/media/0/Documents && \
+pkexec sh -c 'mount --bind ~/Documents ~/.local/share/waydroid/data/media/0/Documents && \
 mount --bind ~/Downloads ~/.local/share/waydroid/data/media/0/Download && \
 mount --bind ~/Music ~/.local/share/waydroid/data/media/0/Music && \
 mount --bind ~/Pictures ~/.local/share/waydroid/data/media/0/Pictures && \

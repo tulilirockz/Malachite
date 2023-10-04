@@ -43,6 +43,5 @@ COPY modules /tmp/modules/
 COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 
 # Run the build script, then clean up temp files and finalize container build.
-RUN cp -r /tmp/config/files/usr/etc/yum.repos.d /etc && \
-    chmod +x /tmp/build.sh && /tmp/build.sh && \
+RUN chmod +x /tmp/build.sh && /tmp/build.sh && \
     rm -rf /tmp/* /var/* && ostree container commit

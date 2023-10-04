@@ -1,8 +1,0 @@
-#!/bin/sh
-cage waydroid show-full-ui &
-sleep 5
-/usr/bin/waydroid-forcestart
-sleep 2
-while :; do
-    :
-done

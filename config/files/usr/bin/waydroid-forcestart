@@ -1,2 +1,2 @@
 #!/bin/sh
-sudo --askpass sh -c "killall waydroid ; waydroid container start" &
+pkexec sh -c "killall waydroid ; waydroid container start" &

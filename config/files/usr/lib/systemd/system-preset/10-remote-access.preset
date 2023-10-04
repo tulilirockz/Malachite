@@ -1,4 +1,0 @@
-enable tailscaled.service
-enable cockpit.socket
-enable cockpit.service
-enable sshd.service

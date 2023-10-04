@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
 Name=Malachite Apps
-Exec=sh /usr/bin/just yafti
+Exec=/usr/bin/just --unstable yafti
 Icon=fish
 Categories=System

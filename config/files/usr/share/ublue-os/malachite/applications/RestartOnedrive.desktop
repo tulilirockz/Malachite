@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Onedrive Restart 
-Comment=Sets up Onedrive dir on HOME
-Exec=bash -c "killall -9 rclone ; fusermount -u ~/OneDrive ; rclone --vfs-cache-mode writes mount OneDrive: ~/OneDrive --daemon"
-Icon=org.gnome.Terminal
-Type=Application
-Categories=Utility;System;
-Name[en_US]=startup
