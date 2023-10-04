@@ -1,6 +1,6 @@
 name: malachite
 description: Opinionated Fedora Silverblue-based operating system image
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/bluefin
 image-version: 39
 
 modules:
@@ -14,7 +14,6 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
     install:
-      - podman-docker
       - cockpit
       - cockpit-podman
       - cockpit-system
