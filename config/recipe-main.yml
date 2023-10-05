@@ -4,42 +4,42 @@ base-image: ghcr.io/ublue-os/bazzite-gnome
 image-version: latest
 
 modules:
-  - type: yafti
-
   - type: files
     files:
       - usr: /usr
 
   - type: rpm-ostree
     repos:
+      - https://copr.fedorainfracloud.org/coprs/bobslept/nerd-fonts/repo/fedora-%OS_VERSION%/bobslept-nerd-fonts-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
-      - cockpit
-      - cockpit-podman
-      - cockpit-system
-      - cockpit-ws
-      - tailscale
+      - podman-compose
       - tmux
+      - cockpit
+      - cockpit-ws
+      - cockpit-podman
+      - cockpit-navigator
       - waypipe
       - cage
+      - snapd
+      - snap-confine
       - waydroid
       - rclone
       - onedriver
       - yaru-theme
+      - ubuntu-nerd-fonts
+      - ubuntumono-nerd-fonts
     remove:
 
   - type: bling
     install:
-      - fonts
       - justfiles
       - nix-installer
-      - ublue-update
 
   - type: script
     scripts:
       - signing.sh
-      - networkmanager-realtek.sh
 
   - type: systemd
     system:
@@ -47,4 +47,7 @@ modules:
         - cockpit.service
         - sshd.service
       disabled:
+        - displaylink.service
+        - pmie.service
+        - pmlogger.service
         - waydroid-container.service

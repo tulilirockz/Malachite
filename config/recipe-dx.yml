@@ -4,8 +4,6 @@ base-image: ghcr.io/ublue-os/bazzite-gnome
 image-version: latest
 
 modules:
-  - type: yafti
-
   - type: files
     files:
       - usr: /usr
@@ -67,7 +65,6 @@ modules:
 
   - type: bling
     install:
-      - fonts
       - justfiles
       - nix-installer
       - container-tools
@@ -82,6 +79,7 @@ modules:
         - cockpit.service
         - sshd.service
       disabled:
+        - displaylink.service
         - pmie.service
         - pmlogger.service
         - waydroid-container.service
