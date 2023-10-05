@@ -1,7 +1,7 @@
 name: malachite
 description: Opinionated Fedora Silverblue-based operating system image
 base-image: ghcr.io/ublue-os/bazzite-gnome
-image-version: 39
+image-version: latest
 
 modules:
   - type: yafti
