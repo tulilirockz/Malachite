@@ -1,7 +1,7 @@
 name: malachite-laptop
 description: Opinionated Fedora Silverblue-based operating system image
-base-image: ghcr.io/ublue-os/bazzite-gnome
-image-version: latest
+base-image: ghcr.io/ublue-os/bluefin
+image-version: 39
 
 modules:
   - type: files
@@ -10,7 +10,6 @@ modules:
 
   - type: rpm-ostree
     repos:
-      - https://copr.fedorainfracloud.org/coprs/bobslept/nerd-fonts/repo/fedora-%OS_VERSION%/bobslept-nerd-fonts-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
@@ -28,20 +27,22 @@ modules:
       - waydroid
       - rclone
       - onedriver
-      - yaru-theme
-      - ubuntu-nerd-fonts
-      - ubuntumono-nerd-fonts
     remove:
       - wpa_supplicant
 
   - type: bling
     install:
+      - fonts
       - justfiles
       - nix-installer
+      - container-tools
+      - laptop
+      - ublue-update
 
   - type: script
     scripts:
       - signing.sh
+      - networkmanager-realtek.sh
 
   - type: systemd
     system:
@@ -49,5 +50,7 @@ modules:
         - cockpit.service
         - sshd.service
       disabled:
-        - displaylink.service
         - waydroid-container.service
+    user:
+      enabled:
+        - podman.socket

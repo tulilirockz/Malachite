@@ -1,9 +1,11 @@
 name: malachite-dx
 description: Opinionated Fedora Silverblue-based operating system image
-base-image: ghcr.io/ublue-os/bazzite-gnome
-image-version: latest
+base-image: ghcr.io/ublue-os/bluefin-dx
+image-version: 39
 
 modules:
+  - type: yafti
+
   - type: files
     files:
       - usr: /usr
@@ -14,11 +16,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
-      - podman-docker
       - podman-compose
-      - podman-plugins
-      - podman-tui
-      - podmansh
       - cockpit
       - cockpit-podman
       - cockpit-navigator
@@ -58,20 +56,20 @@ modules:
       - rclone
       - onedriver
       - gnome-boxes
-      - yaru-theme
-      - ubuntu-nerd-fonts
-      - ubuntumono-nerd-fonts
     remove:
 
   - type: bling
     install:
+      - fonts
       - justfiles
       - nix-installer
       - container-tools
+      - ublue-update
 
   - type: script
     scripts:
       - signing.sh
+      - networkmanager-realtek.sh
 
   - type: systemd
     system:
@@ -79,7 +77,6 @@ modules:
         - cockpit.service
         - sshd.service
       disabled:
-        - displaylink.service
         - pmie.service
         - pmlogger.service
         - waydroid-container.service
