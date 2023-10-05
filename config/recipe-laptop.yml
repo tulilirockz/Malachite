@@ -50,6 +50,4 @@ modules:
         - sshd.service
       disabled:
         - displaylink.service
-        - pmie.service
-        - pmlogger.service
         - waydroid-container.service
