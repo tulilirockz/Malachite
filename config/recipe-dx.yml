@@ -1,6 +1,6 @@
 name: malachite-dx
 description: Opinionated Fedora Silverblue-based operating system image
-base-image: ghcr.io/ublue-os/bluefin-dx
+base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 39
 
 modules:
@@ -16,6 +16,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
+      - podman-docker
       - podman-compose
       - cockpit
       - cockpit-podman
@@ -69,7 +70,6 @@ modules:
   - type: script
     scripts:
       - signing.sh
-      - networkmanager-realtek.sh
 
   - type: systemd
     system:

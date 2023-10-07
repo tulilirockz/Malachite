@@ -1,7 +1,6 @@
-
 name: malachite
 description: Opinionated Fedora Silverblue-based operating system image
-base-image: ghcr.io/ublue-os/bluefin
+base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 39
 
 modules:
@@ -48,4 +47,3 @@ modules:
         - sshd.service
       disabled:
         - waydroid-container.service
-
