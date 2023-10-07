@@ -16,6 +16,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
+      - podman-docker
       - podman-compose
       - cockpit
       - cockpit-podman
@@ -24,14 +25,11 @@ modules:
       - cockpit-pcp
       - cockpit-networkmanager
       - cockpit-ostree
-      - cockpit-machines
       - cockpit-selinux
       - cockpit-storaged
       - cockpit-system
       - cockpit-ws
       - tmux
-      - vagrant
-      - vagrant-libvirt
       - f28-backgrounds-gnome
       - f29-backgrounds-gnome
       - f30-backgrounds-gnome
@@ -44,18 +42,21 @@ modules:
       - snap-confine
       - waydroid
       - lzip
-      - virt-manager
-      - virt-bootstrap
-      - virt-top
-      - virt-backup
-      - virt-install
-      - virt-top
-      - virt-what
-      - virt-v2v
-      - virt-p2v
+      # - vagrant
+      # - vagrant-libvirt
+      # - virt-manager
+      # - virt-bootstrap
+      # - virt-top
+      # - virt-backup
+      # - virt-install
+      # - virt-top
+      # - virt-what
+      # - virt-v2v
+      # - virt-p2v
+      # - cockpit-machines
+      # - gnome-boxes
       - rclone
       - onedriver
-      - gnome-boxes
     remove:
 
   - type: bling
