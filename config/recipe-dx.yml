@@ -16,7 +16,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
-      - podman-docker
+      # - podman-docker
       - podman-compose
       - cockpit
       - cockpit-podman
@@ -77,8 +77,6 @@ modules:
         - cockpit.service
         - sshd.service
       disabled:
-        - pmie.service
-        - pmlogger.service
         - waydroid-container.service
     user:
       enabled:
