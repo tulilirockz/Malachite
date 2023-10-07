@@ -57,6 +57,10 @@ modules:
       # - gnome-boxes
       - rclone
       - onedriver
+      - yaru-theme
+      - ubuntu-nerd-fonts
+      - ubuntumono-nerd-fonts
+      - gnome-shell-extension-dash-to-dock
     remove:
 
   - type: bling
