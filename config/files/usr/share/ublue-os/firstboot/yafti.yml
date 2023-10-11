@@ -250,6 +250,11 @@ screens:
           description: Make content for the Internet.
           default: false
           packages:
+            - Image Text Extractor: com.github.tenderowl.frog
+            - Image Cropper: com.github.taiko2k.avvie
+            - Image Deduper: com.github.qarmin.czkawka
+            - Image Upscaler: io.gitlab.theevilskeleton.Upscaler
+            - Image Converter: io.gitlab.adhami3310.Converter
             - Penpot Desktop: com.sudovanilla.penpot-desktop
             - Frog: com.github.tenderowl.frog
             - DigiKam: org.kde.digikam
@@ -285,6 +290,7 @@ screens:
           description: Tools for development
           default: false
           packages:
+            - QEMU DBus Viewer (Snowglobe): com.belmoussaoui.snowglobe
             - Kleopatra: org.kde.kleopatra
             - Profiler (KCacheGrind): org.kde.kcachegrind
             - Kompare: org.kde.kompare

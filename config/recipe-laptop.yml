@@ -46,7 +46,6 @@ modules:
       - justfiles
       - nix-installer
       - container-tools
-      - laptop
       - ublue-update
 
   - type: script
