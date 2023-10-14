@@ -1,9 +1,11 @@
 name: malachite-laptop
 description: Opinionated Fedora Silverblue-based operating system image
-base-image: ghcr.io/ublue-os/bluefin
+base-image: ghcr.io/tulilirockz/pantheon-main
 image-version: 39
 
 modules:
+  - type: yafti
+
   - type: files
     files:
       - usr: /usr
@@ -18,7 +20,6 @@ modules:
       - podman-compose
       - tmux
       - cockpit
-      - cockpit-ws
       - cockpit-podman
       - cockpit-navigator
       - waypipe
@@ -31,18 +32,11 @@ modules:
       - yaru-theme
       - ubuntu-nerd-fonts
       - ubuntumono-nerd-fonts
-      - gnome-shell-extension-dash-to-dock
-      - gnome-shell-extension-gsconnect
-      - gnome-shell-extension-blur-my-shell
-      - gnome-shell-extension-pop-shell
-      - gnome-shell-extension-caffeine
-      - gnome-shell-extension-appindicator
     remove:
       - wpa_supplicant
 
   - type: bling
     install:
-      - fonts
       - justfiles
       - nix-installer
       - container-tools

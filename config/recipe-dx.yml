@@ -1,6 +1,6 @@
 name: malachite-dx
 description: Opinionated Fedora Silverblue-based operating system image
-base-image: ghcr.io/ublue-os/bluefin-dx
+base-image: ghcr.io/ublue-os/kinoite-main
 image-version: 39
 
 modules:
@@ -14,7 +14,7 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/bobslept/nerd-fonts/repo/fedora-%OS_VERSION%/bobslept-nerd-fonts-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
-      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+      # - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
       - podman-compose
       - cockpit
@@ -29,10 +29,6 @@ modules:
       - cockpit-system
       - cockpit-ws
       - tmux
-      - f28-backgrounds-gnome
-      - f29-backgrounds-gnome
-      - f30-backgrounds-gnome
-      - f33-backgrounds-gnome
       - butane
       - make
       - waypipe
@@ -59,17 +55,10 @@ modules:
       - yaru-theme
       - ubuntu-nerd-fonts
       - ubuntumono-nerd-fonts
-      - gnome-shell-extension-dash-to-dock
-      - gnome-shell-extension-gsconnect
-      - gnome-shell-extension-blur-my-shell
-      - gnome-shell-extension-pop-shell
-      - gnome-shell-extension-caffeine
-      - gnome-shell-extension-appindicator
     remove:
 
   - type: bling
     install:
-      - fonts
       - justfiles
       - nix-installer
       - container-tools
