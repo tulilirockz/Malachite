@@ -17,6 +17,7 @@ modules:
       - cage
       - rclone
       - onedriver
+      - onedrive
     remove:
 
   - type: bling

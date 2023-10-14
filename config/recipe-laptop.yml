@@ -30,6 +30,7 @@ modules:
       - onedriver
       - ubuntu-nerd-fonts
       - ubuntumono-nerd-fonts
+      - onedrive
     remove:
       - wpa_supplicant
 

@@ -23,6 +23,7 @@ modules:
       - waydroid
       - rclone
       - onedriver
+      - onedrive
       - yaru-theme
       - ubuntu-nerd-fonts
       - ubuntumono-nerd-fonts
