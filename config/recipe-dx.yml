@@ -36,7 +36,6 @@ modules:
       - snapd
       - snap-confine
       - waydroid
-      - lzip
       - vagrant
       - vagrant-libvirt
       - virt-manager
@@ -49,10 +48,8 @@ modules:
       - virt-v2v
       - virt-p2v
       - cockpit-machines
-      - gnome-boxes
       - rclone
       - onedriver
-      - yaru-theme
       - ubuntu-nerd-fonts
       - ubuntumono-nerd-fonts
     remove:
