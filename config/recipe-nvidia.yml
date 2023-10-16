@@ -9,20 +9,17 @@ modules:
       - usr: /usr
 
   - type: rpm-ostree
-    repos:
-      - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
     install:
       - tmux
       - waypipe
       - cage
       - rclone
-      - onedriver
       - onedrive
+      - fish
     remove:
 
   - type: bling
     install:
-      - fonts
       - justfiles
       - nix-installer
       - ublue-update

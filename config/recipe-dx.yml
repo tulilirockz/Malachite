@@ -13,8 +13,6 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/bobslept/nerd-fonts/repo/fedora-%OS_VERSION%/bobslept-nerd-fonts-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
-      # - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
       - podman-compose
       - cockpit
@@ -49,7 +47,7 @@ modules:
       - virt-p2v
       - cockpit-machines
       - rclone
-      - onedriver
+      - fish
       - ubuntu-nerd-fonts
       - ubuntumono-nerd-fonts
       - onedrive
