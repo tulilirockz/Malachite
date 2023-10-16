@@ -21,7 +21,6 @@ modules:
       - cage
       - waydroid
       - rclone
-      - onedriver
       - onedrive
       - yaru-theme
       - ubuntu-nerd-fonts

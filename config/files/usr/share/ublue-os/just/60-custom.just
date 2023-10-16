@@ -1,5 +1,18 @@
 !include /usr/share/ublue-os/just/100-bling.just
 
+rustup:
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+bun:
+  curl -fsSL https://bun.sh/install | bash
+
+ghcup:
+  sudo dnf install -y gcc gcc-c++ gmp gmp-devel make ncurses ncurses-compat-libs xz perl
+  curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+
+libvirt-group:
+  pkexec sh -c "groupadd --system lxd && usermod -a -G lxd $USER" 
+
 assemble-distrobox:
   echo 'Assembling and replacing distroboxes ...'
   distrobox assemble create --replace --file /etc/distrobox/distrobox.ini

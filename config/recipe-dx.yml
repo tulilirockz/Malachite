@@ -17,15 +17,6 @@ modules:
       - podman-compose
       - cockpit
       - cockpit-podman
-      - cockpit-navigator
-      - cockpit-file-sharing
-      - cockpit-pcp
-      - cockpit-networkmanager
-      - cockpit-ostree
-      - cockpit-selinux
-      - cockpit-storaged
-      - cockpit-system
-      - cockpit-ws
       - tmux
       - butane
       - make
@@ -34,18 +25,6 @@ modules:
       - snapd
       - snap-confine
       - waydroid
-      - vagrant
-      - vagrant-libvirt
-      - virt-manager
-      - virt-bootstrap
-      - virt-top
-      - virt-backup
-      - virt-install
-      - virt-top
-      - virt-what
-      - virt-v2v
-      - virt-p2v
-      - cockpit-machines
       - rclone
       - fish
       - ubuntu-nerd-fonts
@@ -66,9 +45,6 @@ modules:
 
   - type: systemd
     system:
-      enabled:
-        - cockpit.service
-        - sshd.service
       disabled:
         - waydroid-container.service
     user:
