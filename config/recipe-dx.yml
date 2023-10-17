@@ -30,6 +30,7 @@ modules:
       - ubuntu-nerd-fonts
       - ubuntumono-nerd-fonts
       - onedrive
+      - virt-viewer
     remove:
 
   - type: bling
