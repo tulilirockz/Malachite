@@ -39,8 +39,6 @@ modules:
     system:
       disabled:
         - waydroid-container.service
-        - displaylink.service
-        - bazzite-hardware-setup.service
     user:
       enabled:
         - podman.socket

@@ -22,9 +22,3 @@ modules:
   - type: script
     scripts:
       - signing.sh
-
-  - type: systemd
-    system:
-      disabled:
-        - bazzite-hardware-setup.service
-        - displaylink.service
