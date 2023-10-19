@@ -1,11 +1,9 @@
 name: malachite-laptop
 description: Opinionated Fedora Silverblue-based operating system image
-base-image: ghcr.io/ublue-os/onyx-main
+base-image: ghcr.io/ublue-os/bazzite
 image-version: 39
 
 modules:
-  - type: yafti
-
   - type: files
     files:
       - usr: /usr
@@ -15,16 +13,9 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/bobslept/nerd-fonts/repo/fedora-%OS_VERSION%/bobslept-nerd-fonts-fedora-%OS_VERSION%.repo
     install:
       - iwd
-      - podman-compose
-      - tmux
-      - cockpit
-      - cockpit-podman
-      - cockpit-navigator
-      - waypipe
       - cage
       - snapd
       - snap-confine
-      - waydroid
       - rclone
       - ubuntu-nerd-fonts
       - ubuntumono-nerd-fonts
@@ -38,7 +29,6 @@ modules:
       - justfiles
       - nix-installer
       - container-tools
-      - ublue-update
 
   - type: script
     scripts:
@@ -47,11 +37,10 @@ modules:
 
   - type: systemd
     system:
-      enabled:
-        - cockpit.service
-        - sshd.service
       disabled:
         - waydroid-container.service
+        - displaylink.service
+        - bazzite-hardware-setup.service
     user:
       enabled:
         - podman.socket

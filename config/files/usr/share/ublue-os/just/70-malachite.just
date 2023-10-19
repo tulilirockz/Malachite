@@ -55,8 +55,8 @@ skel-to-home:
   rsync -avh /etc/skel "$HOME"
 
 yafti:
-  rm -rf "$HOME/.config/yafti"
-  yafti /usr/share/ublue-os/firstboot/yafti.yml
+  -rm -rf "$HOME/.config/yafti"
+  yafti /usr/share/ublue-os/malachite/yafti/yafti.yml
 
 update-yadm:
   cd $HOME/.local/share/yadm-clone && git pull

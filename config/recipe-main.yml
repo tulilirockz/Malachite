@@ -1,68 +1,34 @@
 name: malachite
 description: Opinionated Fedora Silverblue-based operating system image
-base-image: ghcr.io/ublue-os/bluefin
+base-image: ghcr.io/ublue-os/bazzite
 image-version: 39
 
 modules:
-  - type: yafti
-
   - type: files
     files:
       - usr: /usr
 
   - type: rpm-ostree
     repos:
-      - https://copr.fedorainfracloud.org/coprs/bobslept/nerd-fonts/repo/fedora-%OS_VERSION%/bobslept-nerd-fonts-fedora-%OS_VERSION%.repo
     install:
-      - cockpit
-      - cockpit-podman
-      - tmux
-      - waypipe
       - cage
-      - waydroid
       - rclone
-      - onedrive
-      - yaru-theme
-      - ubuntu-nerd-fonts
-      - ubuntumono-nerd-fonts
-      - gnome-shell-extension-dash-to-dock
-      - gnome-shell-extension-gsconnect
-      - gnome-shell-extension-blur-my-shell
-      - gnome-shell-extension-pop-shell
-      - gnome-shell-extension-caffeine
-      - gnome-shell-extension-appindicator
       - fish
+      - onedrive
     remove:
 
   - type: bling
     install:
-      - fonts
       - justfiles
       - nix-installer
-      - ublue-update
 
   - type: script
     scripts:
       - signing.sh
-      - networkmanager-realtek.sh
 
   - type: systemd
     system:
-      enabled:
-        - cockpit.service
-        - sshd.service
       disabled:
         - waydroid-container.service
-
-  - type: fonts
-    fonts:
-      nerd-fonts:
-        - FiraCode
-        - Hack
-        - SourceCodePro
-        - Terminus
-        - JetBrainsMono
-        - NerdFontsSymbolsOnly
-      google-fonts:
-        - Roboto
-        - Open Sans
+        - displaylink.service
+        - bazzite-hardware-setup.service

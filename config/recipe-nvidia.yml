@@ -10,11 +10,7 @@ modules:
 
   - type: rpm-ostree
     install:
-      - tmux
-      - waypipe
       - cage
-      - rclone
-      - onedrive
       - fish
     remove:
 
@@ -22,8 +18,13 @@ modules:
     install:
       - justfiles
       - nix-installer
-      - ublue-update
 
   - type: script
     scripts:
       - signing.sh
+
+  - type: systemd
+    system:
+      disabled:
+        - bazzite-hardware-setup.service
+        - displaylink.service

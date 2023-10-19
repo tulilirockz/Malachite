@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+/usr/bin/just -f /usr/share/ublue-os/just/70-malachite.just $@
