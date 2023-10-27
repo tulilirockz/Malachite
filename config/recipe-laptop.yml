@@ -1,9 +1,11 @@
 name: malachite-laptop
 description: Opinionated Fedora Silverblue-based operating system image
-base-image: ghcr.io/ublue-os/bazzite
+base-image: ghcr.io/ublue-os/lxqt-main
 image-version: 39
 
 modules:
+  - type: yafti
+
   - type: files
     files:
       - usr: /usr
@@ -29,6 +31,7 @@ modules:
       - justfiles
       - nix-installer
       - container-tools
+      - ublue-update
 
   - type: script
     scripts:
