@@ -22,6 +22,7 @@ modules:
       - ubuntu-nerd-fonts
       - ubuntumono-nerd-fonts
       - onedrive
+      - waydroid
       - fish
     remove:
       - wpa_supplicant
