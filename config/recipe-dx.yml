@@ -13,6 +13,8 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/bobslept/nerd-fonts/repo/fedora-%OS_VERSION%/bobslept-nerd-fonts-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/atim/nushell/repo/fedora-%OS_VERSION%/atim-nushell-fedora-%OS_VERSION%.repo
     install:
+      - podman-compose
+      - podman-docker
       - cage
       - snapd
       - snap-confine

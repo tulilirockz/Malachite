@@ -1,11 +1,5 @@
 !include /usr/share/ublue-os/just/100-bling.just
 
-rustup:
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-bun:
-  curl -fsSL https://bun.sh/install | bash
-
 ghcup:
   sudo dnf install -y gcc gcc-c++ gmp gmp-devel make ncurses ncurses-compat-libs xz perl
   curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
@@ -38,6 +32,10 @@ remotes-enable:
   firewall-cmd --runtime-to-permanent ; \
   firewall-cmd --reload ; \
   tailscale up"
+
+firewalld:
+  firewall-cmd --set-default-zone=FedoraServer
+  firewall-cmd --runtime-to-permanent 
   
 positivo-touchscreen:
   cp /usr/share/ublue-os/malachite/99-positivo-touchscreen.rules /etc/udev/rules.d/
