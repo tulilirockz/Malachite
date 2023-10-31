@@ -4,7 +4,7 @@ ghcup:
   sudo dnf install -y gcc gcc-c++ gmp gmp-devel make ncurses ncurses-compat-libs xz perl
   curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 
-libvirt-group:
+lxc-group:
   pkexec sh -c "groupadd --system lxd && usermod -a -G lxd $USER" 
 
 assemble-distrobox:

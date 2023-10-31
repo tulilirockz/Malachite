@@ -32,33 +32,33 @@ screens:
           description: Sets up proper remote access to this system!
           default: false
           packages:
-            - Setup Remotes: just remotes-enable
+            - Setup Remotes: mjust remotes-enable
         Dotfiles:
           description: Sets up my dotfiles and applies them directily to your system
           default: false
           packages:
-            - Setup: just dotfiles-clone
+            - Setup: mjust dotfiles-clone
         Positivo Touch Screen (LAPTOP):
           description: Adds udev rules for Positivo c464c-like laptops touchscreens
           default: false
           packages:
-            - Setup: just positivo-touchscreen
+            - Setup: mjust positivo-touchscreen
         Extra Sessions:
           description: Sets up the Ubuntu theme
           default: false
           packages:
-            - Setup: just extra-sessions
+            - Setup: mjust extra-sessions
         Ubuntu theming (GNOME):
           description: Sets up the Ubuntu theme
           default: false
           packages:
-            - Setup: just ubuntu-theme
+            - Setup: mjust ubuntu-theme
         Libvirtd (DX):
           description: Adds libvirtd and qemu groups to your user for usage with virt-manager
           default: false
           packages:
-            - Setup Groups: just setup libvirt
-            - Setup Session: just setup virt-manager-session
+            - Setup Groups: mjust setup libvirt
+            - Setup Session: mjust setup virt-manager-session
   can-we-modify-your-flatpaks:
     source: yafti.screen.consent
     values:
